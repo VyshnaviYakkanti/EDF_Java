@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_package = "com.gl.edfstubs";
+
+service EmployeeDetails{
+
+    rpc allemployees(Empty) returns (Employees);
+    rpc editemployee(Employee) returns (Response);
+    rpc addemployee(Employee) returns (Response);
+}
+
+message Employee
+		{
+		int64 employeeid = 1;
+		string name = 2;
+		string project = 3;
+		repeated string skills = 4;
+		int64 phonenumber = 5;
+		}	
+
+message Employees{
+
+	repeated Employee employee= 1;
+}
+
+message Empty
+{
+}
+
+message Response
+{
+string  responsemessage = 1;
+}
