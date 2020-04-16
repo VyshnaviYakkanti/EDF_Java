@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "Employee.proto";
+import "Response.proto";
+
+option java_package = "com.gl.edfstubs";
+
+service EmployeeDetails{
+
+    rpc allemployees(Empty) returns (Employees);
+    rpc editemployee(Employee) returns (Response);
+    rpc addemployee(Employee) returns (Response);
+    rpc deleteemployee(Employee) returns (Response);
+}

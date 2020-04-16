@@ -4,8 +4,9 @@ package com.gl.services;
 import com.gl.edfstubs.EmployeeDetailsGrpc.EmployeeDetailsImplBase;
 import com.gl.edfstubs.EmployeeOuterClass.Employee;
 import com.gl.edfstubs.EmployeeOuterClass.Employees;
-import com.gl.edfstubs.EmployeeOuterClass.Empty;
-import com.gl.edfstubs.EmployeeOuterClass.Response;
+
+import com.gl.edfstubs.ResponseOuterClass.Response;
+import com.gl.edfstubs.ResponseOuterClass.Empty;
 import com.gl.spanner.DBConnection;
 import com.google.cloud.spanner.DatabaseClient;
 
@@ -32,6 +33,26 @@ public class EmployeeService extends EmployeeDetailsImplBase  {
 		responseObserver.onCompleted();		
 	
 	}
+
+	@Override
+	public void editemployee(Employee request,
+			StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response> responseObserver) {
+		// TODO Auto-generated method stub
+		super.editemployee(request, responseObserver);
+	}
+
+
+
+	@Override
+	public void deleteemployee(Employee request, StreamObserver<Response> responseObserver) {
+		DBConnection db=new DBConnection();
+		DatabaseClient dbclient=db.startConnection();
+		responseObserver.onNext(db.deleteEmployee(request,dbclient));
+		db.closeConnection();
+		responseObserver.onCompleted();	
+	}
+	
+	
 	
 
 	

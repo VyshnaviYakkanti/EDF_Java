@@ -14,1041 +14,32 @@ public final class EmployeeOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface EmployeeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Employee)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 employeeid = 1;</code>
-     */
-    long getEmployeeid();
-
-    /**
-     * <code>string name = 2;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string project = 3;</code>
-     */
-    java.lang.String getProject();
-    /**
-     * <code>string project = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getProjectBytes();
-
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    java.util.List<java.lang.String>
-        getSkillsList();
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    int getSkillsCount();
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    java.lang.String getSkills(int index);
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getSkillsBytes(int index);
-
-    /**
-     * <code>int64 phonenumber = 5;</code>
-     */
-    long getPhonenumber();
-  }
-  /**
-   * Protobuf type {@code Employee}
-   */
-  public  static final class Employee extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Employee)
-      EmployeeOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Employee.newBuilder() to construct.
-    private Employee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Employee() {
-      employeeid_ = 0L;
-      name_ = "";
-      project_ = "";
-      skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      phonenumber_ = 0L;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Employee(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              employeeid_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              project_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                skills_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              skills_.add(s);
-              break;
-            }
-            case 40: {
-
-              phonenumber_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          skills_ = skills_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.gl.edfstubs.EmployeeOuterClass.Employee.class, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int EMPLOYEEID_FIELD_NUMBER = 1;
-    private long employeeid_;
-    /**
-     * <code>int64 employeeid = 1;</code>
-     */
-    public long getEmployeeid() {
-      return employeeid_;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 2;</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PROJECT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object project_;
-    /**
-     * <code>string project = 3;</code>
-     */
-    public java.lang.String getProject() {
-      java.lang.Object ref = project_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        project_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string project = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProjectBytes() {
-      java.lang.Object ref = project_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        project_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SKILLS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList skills_;
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSkillsList() {
-      return skills_;
-    }
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    public int getSkillsCount() {
-      return skills_.size();
-    }
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    public java.lang.String getSkills(int index) {
-      return skills_.get(index);
-    }
-    /**
-     * <code>repeated string skills = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getSkillsBytes(int index) {
-      return skills_.getByteString(index);
-    }
-
-    public static final int PHONENUMBER_FIELD_NUMBER = 5;
-    private long phonenumber_;
-    /**
-     * <code>int64 phonenumber = 5;</code>
-     */
-    public long getPhonenumber() {
-      return phonenumber_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (employeeid_ != 0L) {
-        output.writeInt64(1, employeeid_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getProjectBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, project_);
-      }
-      for (int i = 0; i < skills_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, skills_.getRaw(i));
-      }
-      if (phonenumber_ != 0L) {
-        output.writeInt64(5, phonenumber_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (employeeid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, employeeid_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getProjectBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, project_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < skills_.size(); i++) {
-          dataSize += computeStringSizeNoTag(skills_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSkillsList().size();
-      }
-      if (phonenumber_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, phonenumber_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Employee)) {
-        return super.equals(obj);
-      }
-      com.gl.edfstubs.EmployeeOuterClass.Employee other = (com.gl.edfstubs.EmployeeOuterClass.Employee) obj;
-
-      boolean result = true;
-      result = result && (getEmployeeid()
-          == other.getEmployeeid());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getProject()
-          .equals(other.getProject());
-      result = result && getSkillsList()
-          .equals(other.getSkillsList());
-      result = result && (getPhonenumber()
-          == other.getPhonenumber());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EMPLOYEEID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEmployeeid());
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + PROJECT_FIELD_NUMBER;
-      hash = (53 * hash) + getProject().hashCode();
-      if (getSkillsCount() > 0) {
-        hash = (37 * hash) + SKILLS_FIELD_NUMBER;
-        hash = (53 * hash) + getSkillsList().hashCode();
-      }
-      hash = (37 * hash) + PHONENUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPhonenumber());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Employee prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Employee}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Employee)
-        com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.gl.edfstubs.EmployeeOuterClass.Employee.class, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder.class);
-      }
-
-      // Construct using com.gl.edfstubs.EmployeeOuterClass.Employee.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        employeeid_ = 0L;
-
-        name_ = "";
-
-        project_ = "";
-
-        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        phonenumber_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
-      }
-
-      @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstanceForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Employee build() {
-        com.gl.edfstubs.EmployeeOuterClass.Employee result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Employee buildPartial() {
-        com.gl.edfstubs.EmployeeOuterClass.Employee result = new com.gl.edfstubs.EmployeeOuterClass.Employee(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.employeeid_ = employeeid_;
-        result.name_ = name_;
-        result.project_ = project_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          skills_ = skills_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.skills_ = skills_;
-        result.phonenumber_ = phonenumber_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Employee) {
-          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Employee)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Employee other) {
-        if (other == com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance()) return this;
-        if (other.getEmployeeid() != 0L) {
-          setEmployeeid(other.getEmployeeid());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getProject().isEmpty()) {
-          project_ = other.project_;
-          onChanged();
-        }
-        if (!other.skills_.isEmpty()) {
-          if (skills_.isEmpty()) {
-            skills_ = other.skills_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureSkillsIsMutable();
-            skills_.addAll(other.skills_);
-          }
-          onChanged();
-        }
-        if (other.getPhonenumber() != 0L) {
-          setPhonenumber(other.getPhonenumber());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.gl.edfstubs.EmployeeOuterClass.Employee parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Employee) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long employeeid_ ;
-      /**
-       * <code>int64 employeeid = 1;</code>
-       */
-      public long getEmployeeid() {
-        return employeeid_;
-      }
-      /**
-       * <code>int64 employeeid = 1;</code>
-       */
-      public Builder setEmployeeid(long value) {
-        
-        employeeid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 employeeid = 1;</code>
-       */
-      public Builder clearEmployeeid() {
-        
-        employeeid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 2;</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object project_ = "";
-      /**
-       * <code>string project = 3;</code>
-       */
-      public java.lang.String getProject() {
-        java.lang.Object ref = project_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          project_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string project = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProjectBytes() {
-        java.lang.Object ref = project_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          project_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string project = 3;</code>
-       */
-      public Builder setProject(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        project_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string project = 3;</code>
-       */
-      public Builder clearProject() {
-        
-        project_ = getDefaultInstance().getProject();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string project = 3;</code>
-       */
-      public Builder setProjectBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        project_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSkillsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSkillsList() {
-        return skills_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public int getSkillsCount() {
-        return skills_.size();
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public java.lang.String getSkills(int index) {
-        return skills_.get(index);
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSkillsBytes(int index) {
-        return skills_.getByteString(index);
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public Builder setSkills(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSkillsIsMutable();
-        skills_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public Builder addSkills(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSkillsIsMutable();
-        skills_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public Builder addAllSkills(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSkillsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, skills_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public Builder clearSkills() {
-        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string skills = 4;</code>
-       */
-      public Builder addSkillsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSkillsIsMutable();
-        skills_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private long phonenumber_ ;
-      /**
-       * <code>int64 phonenumber = 5;</code>
-       */
-      public long getPhonenumber() {
-        return phonenumber_;
-      }
-      /**
-       * <code>int64 phonenumber = 5;</code>
-       */
-      public Builder setPhonenumber(long value) {
-        
-        phonenumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 phonenumber = 5;</code>
-       */
-      public Builder clearPhonenumber() {
-        
-        phonenumber_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Employee)
-    }
-
-    // @@protoc_insertion_point(class_scope:Employee)
-    private static final com.gl.edfstubs.EmployeeOuterClass.Employee DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Employee();
-    }
-
-    public static com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Employee>
-        PARSER = new com.google.protobuf.AbstractParser<Employee>() {
-      @java.lang.Override
-      public Employee parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Employee(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Employee> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Employee> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface EmployeesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Employees)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
     java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> 
-        getEmployeeList();
+        getEmpList();
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    com.gl.edfstubs.EmployeeOuterClass.Employee getEmployee(int index);
+    com.gl.edfstubs.EmployeeOuterClass.Employee getEmp(int index);
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    int getEmployeeCount();
+    int getEmpCount();
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
     java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> 
-        getEmployeeOrBuilderList();
+        getEmpOrBuilderList();
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmployeeOrBuilder(
+    com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmpOrBuilder(
         int index);
   }
   /**
@@ -1064,7 +55,7 @@ public final class EmployeeOuterClass {
       super(builder);
     }
     private Employees() {
-      employee_ = java.util.Collections.emptyList();
+      emp_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1093,10 +84,10 @@ public final class EmployeeOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                employee_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Employee>();
+                emp_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Employee>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              employee_.add(
+              emp_.add(
                   input.readMessage(com.gl.edfstubs.EmployeeOuterClass.Employee.parser(), extensionRegistry));
               break;
             }
@@ -1116,7 +107,7 @@ public final class EmployeeOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          employee_ = java.util.Collections.unmodifiableList(employee_);
+          emp_ = java.util.Collections.unmodifiableList(emp_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1135,39 +126,39 @@ public final class EmployeeOuterClass {
               com.gl.edfstubs.EmployeeOuterClass.Employees.class, com.gl.edfstubs.EmployeeOuterClass.Employees.Builder.class);
     }
 
-    public static final int EMPLOYEE_FIELD_NUMBER = 1;
-    private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> employee_;
+    public static final int EMP_FIELD_NUMBER = 1;
+    private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> emp_;
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> getEmployeeList() {
-      return employee_;
+    public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> getEmpList() {
+      return emp_;
     }
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
     public java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> 
-        getEmployeeOrBuilderList() {
-      return employee_;
+        getEmpOrBuilderList() {
+      return emp_;
     }
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    public int getEmployeeCount() {
-      return employee_.size();
+    public int getEmpCount() {
+      return emp_.size();
     }
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    public com.gl.edfstubs.EmployeeOuterClass.Employee getEmployee(int index) {
-      return employee_.get(index);
+    public com.gl.edfstubs.EmployeeOuterClass.Employee getEmp(int index) {
+      return emp_.get(index);
     }
     /**
-     * <code>repeated .Employee employee = 1;</code>
+     * <code>repeated .Employee emp = 1;</code>
      */
-    public com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmployeeOrBuilder(
+    public com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmpOrBuilder(
         int index) {
-      return employee_.get(index);
+      return emp_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1184,8 +175,8 @@ public final class EmployeeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < employee_.size(); i++) {
-        output.writeMessage(1, employee_.get(i));
+      for (int i = 0; i < emp_.size(); i++) {
+        output.writeMessage(1, emp_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1196,9 +187,9 @@ public final class EmployeeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < employee_.size(); i++) {
+      for (int i = 0; i < emp_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, employee_.get(i));
+          .computeMessageSize(1, emp_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1216,8 +207,8 @@ public final class EmployeeOuterClass {
       com.gl.edfstubs.EmployeeOuterClass.Employees other = (com.gl.edfstubs.EmployeeOuterClass.Employees) obj;
 
       boolean result = true;
-      result = result && getEmployeeList()
-          .equals(other.getEmployeeList());
+      result = result && getEmpList()
+          .equals(other.getEmpList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1229,9 +220,9 @@ public final class EmployeeOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEmployeeCount() > 0) {
-        hash = (37 * hash) + EMPLOYEE_FIELD_NUMBER;
-        hash = (53 * hash) + getEmployeeList().hashCode();
+      if (getEmpCount() > 0) {
+        hash = (37 * hash) + EMP_FIELD_NUMBER;
+        hash = (53 * hash) + getEmpList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1361,17 +352,17 @@ public final class EmployeeOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getEmployeeFieldBuilder();
+          getEmpFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (employeeBuilder_ == null) {
-          employee_ = java.util.Collections.emptyList();
+        if (empBuilder_ == null) {
+          emp_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          employeeBuilder_.clear();
+          empBuilder_.clear();
         }
         return this;
       }
@@ -1400,14 +391,14 @@ public final class EmployeeOuterClass {
       public com.gl.edfstubs.EmployeeOuterClass.Employees buildPartial() {
         com.gl.edfstubs.EmployeeOuterClass.Employees result = new com.gl.edfstubs.EmployeeOuterClass.Employees(this);
         int from_bitField0_ = bitField0_;
-        if (employeeBuilder_ == null) {
+        if (empBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            employee_ = java.util.Collections.unmodifiableList(employee_);
+            emp_ = java.util.Collections.unmodifiableList(emp_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.employee_ = employee_;
+          result.emp_ = emp_;
         } else {
-          result.employee_ = employeeBuilder_.build();
+          result.emp_ = empBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1457,29 +448,29 @@ public final class EmployeeOuterClass {
 
       public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Employees other) {
         if (other == com.gl.edfstubs.EmployeeOuterClass.Employees.getDefaultInstance()) return this;
-        if (employeeBuilder_ == null) {
-          if (!other.employee_.isEmpty()) {
-            if (employee_.isEmpty()) {
-              employee_ = other.employee_;
+        if (empBuilder_ == null) {
+          if (!other.emp_.isEmpty()) {
+            if (emp_.isEmpty()) {
+              emp_ = other.emp_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureEmployeeIsMutable();
-              employee_.addAll(other.employee_);
+              ensureEmpIsMutable();
+              emp_.addAll(other.emp_);
             }
             onChanged();
           }
         } else {
-          if (!other.employee_.isEmpty()) {
-            if (employeeBuilder_.isEmpty()) {
-              employeeBuilder_.dispose();
-              employeeBuilder_ = null;
-              employee_ = other.employee_;
+          if (!other.emp_.isEmpty()) {
+            if (empBuilder_.isEmpty()) {
+              empBuilder_.dispose();
+              empBuilder_ = null;
+              emp_ = other.emp_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              employeeBuilder_ = 
+              empBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEmployeeFieldBuilder() : null;
+                   getEmpFieldBuilder() : null;
             } else {
-              employeeBuilder_.addAllMessages(other.employee_);
+              empBuilder_.addAllMessages(other.emp_);
             }
           }
         }
@@ -1513,244 +504,244 @@ public final class EmployeeOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> employee_ =
+      private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> emp_ =
         java.util.Collections.emptyList();
-      private void ensureEmployeeIsMutable() {
+      private void ensureEmpIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          employee_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Employee>(employee_);
+          emp_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Employee>(emp_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.gl.edfstubs.EmployeeOuterClass.Employee, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder, com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> employeeBuilder_;
+          com.gl.edfstubs.EmployeeOuterClass.Employee, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder, com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> empBuilder_;
 
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> getEmployeeList() {
-        if (employeeBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(employee_);
+      public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee> getEmpList() {
+        if (empBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(emp_);
         } else {
-          return employeeBuilder_.getMessageList();
+          return empBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public int getEmployeeCount() {
-        if (employeeBuilder_ == null) {
-          return employee_.size();
+      public int getEmpCount() {
+        if (empBuilder_ == null) {
+          return emp_.size();
         } else {
-          return employeeBuilder_.getCount();
+          return empBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public com.gl.edfstubs.EmployeeOuterClass.Employee getEmployee(int index) {
-        if (employeeBuilder_ == null) {
-          return employee_.get(index);
+      public com.gl.edfstubs.EmployeeOuterClass.Employee getEmp(int index) {
+        if (empBuilder_ == null) {
+          return emp_.get(index);
         } else {
-          return employeeBuilder_.getMessage(index);
+          return empBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder setEmployee(
+      public Builder setEmp(
           int index, com.gl.edfstubs.EmployeeOuterClass.Employee value) {
-        if (employeeBuilder_ == null) {
+        if (empBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmployeeIsMutable();
-          employee_.set(index, value);
+          ensureEmpIsMutable();
+          emp_.set(index, value);
           onChanged();
         } else {
-          employeeBuilder_.setMessage(index, value);
+          empBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder setEmployee(
+      public Builder setEmp(
           int index, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder builderForValue) {
-        if (employeeBuilder_ == null) {
-          ensureEmployeeIsMutable();
-          employee_.set(index, builderForValue.build());
+        if (empBuilder_ == null) {
+          ensureEmpIsMutable();
+          emp_.set(index, builderForValue.build());
           onChanged();
         } else {
-          employeeBuilder_.setMessage(index, builderForValue.build());
+          empBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder addEmployee(com.gl.edfstubs.EmployeeOuterClass.Employee value) {
-        if (employeeBuilder_ == null) {
+      public Builder addEmp(com.gl.edfstubs.EmployeeOuterClass.Employee value) {
+        if (empBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmployeeIsMutable();
-          employee_.add(value);
+          ensureEmpIsMutable();
+          emp_.add(value);
           onChanged();
         } else {
-          employeeBuilder_.addMessage(value);
+          empBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder addEmployee(
+      public Builder addEmp(
           int index, com.gl.edfstubs.EmployeeOuterClass.Employee value) {
-        if (employeeBuilder_ == null) {
+        if (empBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEmployeeIsMutable();
-          employee_.add(index, value);
+          ensureEmpIsMutable();
+          emp_.add(index, value);
           onChanged();
         } else {
-          employeeBuilder_.addMessage(index, value);
+          empBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder addEmployee(
+      public Builder addEmp(
           com.gl.edfstubs.EmployeeOuterClass.Employee.Builder builderForValue) {
-        if (employeeBuilder_ == null) {
-          ensureEmployeeIsMutable();
-          employee_.add(builderForValue.build());
+        if (empBuilder_ == null) {
+          ensureEmpIsMutable();
+          emp_.add(builderForValue.build());
           onChanged();
         } else {
-          employeeBuilder_.addMessage(builderForValue.build());
+          empBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder addEmployee(
+      public Builder addEmp(
           int index, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder builderForValue) {
-        if (employeeBuilder_ == null) {
-          ensureEmployeeIsMutable();
-          employee_.add(index, builderForValue.build());
+        if (empBuilder_ == null) {
+          ensureEmpIsMutable();
+          emp_.add(index, builderForValue.build());
           onChanged();
         } else {
-          employeeBuilder_.addMessage(index, builderForValue.build());
+          empBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder addAllEmployee(
+      public Builder addAllEmp(
           java.lang.Iterable<? extends com.gl.edfstubs.EmployeeOuterClass.Employee> values) {
-        if (employeeBuilder_ == null) {
-          ensureEmployeeIsMutable();
+        if (empBuilder_ == null) {
+          ensureEmpIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, employee_);
+              values, emp_);
           onChanged();
         } else {
-          employeeBuilder_.addAllMessages(values);
+          empBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder clearEmployee() {
-        if (employeeBuilder_ == null) {
-          employee_ = java.util.Collections.emptyList();
+      public Builder clearEmp() {
+        if (empBuilder_ == null) {
+          emp_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          employeeBuilder_.clear();
+          empBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public Builder removeEmployee(int index) {
-        if (employeeBuilder_ == null) {
-          ensureEmployeeIsMutable();
-          employee_.remove(index);
+      public Builder removeEmp(int index) {
+        if (empBuilder_ == null) {
+          ensureEmpIsMutable();
+          emp_.remove(index);
           onChanged();
         } else {
-          employeeBuilder_.remove(index);
+          empBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder getEmployeeBuilder(
+      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder getEmpBuilder(
           int index) {
-        return getEmployeeFieldBuilder().getBuilder(index);
+        return getEmpFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmployeeOrBuilder(
+      public com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder getEmpOrBuilder(
           int index) {
-        if (employeeBuilder_ == null) {
-          return employee_.get(index);  } else {
-          return employeeBuilder_.getMessageOrBuilder(index);
+        if (empBuilder_ == null) {
+          return emp_.get(index);  } else {
+          return empBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
       public java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> 
-           getEmployeeOrBuilderList() {
-        if (employeeBuilder_ != null) {
-          return employeeBuilder_.getMessageOrBuilderList();
+           getEmpOrBuilderList() {
+        if (empBuilder_ != null) {
+          return empBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(employee_);
+          return java.util.Collections.unmodifiableList(emp_);
         }
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder addEmployeeBuilder() {
-        return getEmployeeFieldBuilder().addBuilder(
+      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder addEmpBuilder() {
+        return getEmpFieldBuilder().addBuilder(
             com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance());
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
-      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder addEmployeeBuilder(
+      public com.gl.edfstubs.EmployeeOuterClass.Employee.Builder addEmpBuilder(
           int index) {
-        return getEmployeeFieldBuilder().addBuilder(
+        return getEmpFieldBuilder().addBuilder(
             index, com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance());
       }
       /**
-       * <code>repeated .Employee employee = 1;</code>
+       * <code>repeated .Employee emp = 1;</code>
        */
       public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Employee.Builder> 
-           getEmployeeBuilderList() {
-        return getEmployeeFieldBuilder().getBuilderList();
+           getEmpBuilderList() {
+        return getEmpFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.gl.edfstubs.EmployeeOuterClass.Employee, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder, com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder> 
-          getEmployeeFieldBuilder() {
-        if (employeeBuilder_ == null) {
-          employeeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getEmpFieldBuilder() {
+        if (empBuilder_ == null) {
+          empBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.gl.edfstubs.EmployeeOuterClass.Employee, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder, com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder>(
-                  employee_,
+                  emp_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
-          employee_ = null;
+          emp_ = null;
         }
-        return employeeBuilder_;
+        return empBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1805,23 +796,220 @@ public final class EmployeeOuterClass {
 
   }
 
-  public interface EmptyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Empty)
+  public interface EmployeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Employee)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 employeeid = 1;</code>
+     */
+    long getEmployeeid();
+
+    /**
+     * <code>string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getProjectsList();
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    int getProjectsCount();
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    java.lang.String getProjects(int index);
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectsBytes(int index);
+
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    java.util.List<java.lang.String>
+        getSkillsList();
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    int getSkillsCount();
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    java.lang.String getSkills(int index);
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getSkillsBytes(int index);
+
+    /**
+     * <code>int64 phonenumber = 5;</code>
+     */
+    long getPhonenumber();
+
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset> 
+        getAssetList();
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.Asset getAsset(int index);
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    int getAssetCount();
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder> 
+        getAssetOrBuilderList();
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder getAssetOrBuilder(
+        int index);
+
+    /**
+     * <code>string seatno = 7;</code>
+     */
+    java.lang.String getSeatno();
+    /**
+     * <code>string seatno = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getSeatnoBytes();
+
+    /**
+     * <code>string ldap = 8;</code>
+     */
+    java.lang.String getLdap();
+    /**
+     * <code>string ldap = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getLdapBytes();
+
+    /**
+     * <code>string clientmail = 9;</code>
+     */
+    java.lang.String getClientmail();
+    /**
+     * <code>string clientmail = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getClientmailBytes();
+
+    /**
+     * <code>string glmail = 10;</code>
+     */
+    java.lang.String getGlmail();
+    /**
+     * <code>string glmail = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getGlmailBytes();
+
+    /**
+     * <code>string vendicard = 11;</code>
+     */
+    java.lang.String getVendicard();
+    /**
+     * <code>string vendicard = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getVendicardBytes();
+
+    /**
+     * <code>string Manger = 12;</code>
+     */
+    java.lang.String getManger();
+    /**
+     * <code>string Manger = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getMangerBytes();
+
+    /**
+     * <code>string bloodgroup = 13;</code>
+     */
+    java.lang.String getBloodgroup();
+    /**
+     * <code>string bloodgroup = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getBloodgroupBytes();
+
+    /**
+     * <code>int64 emergencyphonenumber = 14;</code>
+     */
+    long getEmergencyphonenumber();
+
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    boolean hasPermanentaddress();
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.Address getPermanentaddress();
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getPermanentaddressOrBuilder();
+
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    boolean hasTempaddress();
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.Address getTempaddress();
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getTempaddressOrBuilder();
   }
   /**
-   * Protobuf type {@code Empty}
+   * Protobuf type {@code Employee}
    */
-  public  static final class Empty extends
+  public  static final class Employee extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Empty)
-      EmptyOrBuilder {
+      // @@protoc_insertion_point(message_implements:Employee)
+      EmployeeOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Empty.newBuilder() to construct.
-    private Empty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Employee.newBuilder() to construct.
+    private Employee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Empty() {
+    private Employee() {
+      employeeid_ = 0L;
+      name_ = "";
+      projects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      phonenumber_ = 0L;
+      asset_ = java.util.Collections.emptyList();
+      seatno_ = "";
+      ldap_ = "";
+      clientmail_ = "";
+      glmail_ = "";
+      vendicard_ = "";
+      manger_ = "";
+      bloodgroup_ = "";
+      emergencyphonenumber_ = 0L;
     }
 
     @java.lang.Override
@@ -1829,7 +1017,7 @@ public final class EmployeeOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Empty(
+    private Employee(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1837,6 +1025,7 @@ public final class EmployeeOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1847,6 +1036,122 @@ public final class EmployeeOuterClass {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              employeeid_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                projects_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              projects_.add(s);
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                skills_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              skills_.add(s);
+              break;
+            }
+            case 40: {
+
+              phonenumber_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                asset_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Asset>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              asset_.add(
+                  input.readMessage(com.gl.edfstubs.EmployeeOuterClass.Asset.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              seatno_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ldap_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientmail_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              glmail_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vendicard_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              manger_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bloodgroup_ = s;
+              break;
+            }
+            case 112: {
+
+              emergencyphonenumber_ = input.readInt64();
+              break;
+            }
+            case 122: {
+              com.gl.edfstubs.EmployeeOuterClass.Address.Builder subBuilder = null;
+              if (permanentaddress_ != null) {
+                subBuilder = permanentaddress_.toBuilder();
+              }
+              permanentaddress_ = input.readMessage(com.gl.edfstubs.EmployeeOuterClass.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(permanentaddress_);
+                permanentaddress_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.gl.edfstubs.EmployeeOuterClass.Address.Builder subBuilder = null;
+              if (tempaddress_ != null) {
+                subBuilder = tempaddress_.toBuilder();
+              }
+              tempaddress_ = input.readMessage(com.gl.edfstubs.EmployeeOuterClass.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tempaddress_);
+                tempaddress_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1862,21 +1167,465 @@ public final class EmployeeOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          projects_ = projects_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          skills_ = skills_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          asset_ = java.util.Collections.unmodifiableList(asset_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Empty_descriptor;
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Empty_fieldAccessorTable
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.gl.edfstubs.EmployeeOuterClass.Empty.class, com.gl.edfstubs.EmployeeOuterClass.Empty.Builder.class);
+              com.gl.edfstubs.EmployeeOuterClass.Employee.class, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EMPLOYEEID_FIELD_NUMBER = 1;
+    private long employeeid_;
+    /**
+     * <code>int64 employeeid = 1;</code>
+     */
+    public long getEmployeeid() {
+      return employeeid_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECTS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList projects_;
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProjectsList() {
+      return projects_;
+    }
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    public int getProjectsCount() {
+      return projects_.size();
+    }
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    public java.lang.String getProjects(int index) {
+      return projects_.get(index);
+    }
+    /**
+     * <code>repeated string projects = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectsBytes(int index) {
+      return projects_.getByteString(index);
+    }
+
+    public static final int SKILLS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList skills_;
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSkillsList() {
+      return skills_;
+    }
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    public int getSkillsCount() {
+      return skills_.size();
+    }
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    public java.lang.String getSkills(int index) {
+      return skills_.get(index);
+    }
+    /**
+     * <code>repeated string skills = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSkillsBytes(int index) {
+      return skills_.getByteString(index);
+    }
+
+    public static final int PHONENUMBER_FIELD_NUMBER = 5;
+    private long phonenumber_;
+    /**
+     * <code>int64 phonenumber = 5;</code>
+     */
+    public long getPhonenumber() {
+      return phonenumber_;
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 6;
+    private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset> asset_;
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset> getAssetList() {
+      return asset_;
+    }
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    public java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder> 
+        getAssetOrBuilderList() {
+      return asset_;
+    }
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    public int getAssetCount() {
+      return asset_.size();
+    }
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.Asset getAsset(int index) {
+      return asset_.get(index);
+    }
+    /**
+     * <code>repeated .Asset asset = 6;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder getAssetOrBuilder(
+        int index) {
+      return asset_.get(index);
+    }
+
+    public static final int SEATNO_FIELD_NUMBER = 7;
+    private volatile java.lang.Object seatno_;
+    /**
+     * <code>string seatno = 7;</code>
+     */
+    public java.lang.String getSeatno() {
+      java.lang.Object ref = seatno_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seatno_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seatno = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSeatnoBytes() {
+      java.lang.Object ref = seatno_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seatno_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LDAP_FIELD_NUMBER = 8;
+    private volatile java.lang.Object ldap_;
+    /**
+     * <code>string ldap = 8;</code>
+     */
+    public java.lang.String getLdap() {
+      java.lang.Object ref = ldap_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ldap_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ldap = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLdapBytes() {
+      java.lang.Object ref = ldap_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ldap_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTMAIL_FIELD_NUMBER = 9;
+    private volatile java.lang.Object clientmail_;
+    /**
+     * <code>string clientmail = 9;</code>
+     */
+    public java.lang.String getClientmail() {
+      java.lang.Object ref = clientmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string clientmail = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClientmailBytes() {
+      java.lang.Object ref = clientmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GLMAIL_FIELD_NUMBER = 10;
+    private volatile java.lang.Object glmail_;
+    /**
+     * <code>string glmail = 10;</code>
+     */
+    public java.lang.String getGlmail() {
+      java.lang.Object ref = glmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        glmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string glmail = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGlmailBytes() {
+      java.lang.Object ref = glmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        glmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VENDICARD_FIELD_NUMBER = 11;
+    private volatile java.lang.Object vendicard_;
+    /**
+     * <code>string vendicard = 11;</code>
+     */
+    public java.lang.String getVendicard() {
+      java.lang.Object ref = vendicard_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vendicard_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string vendicard = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVendicardBytes() {
+      java.lang.Object ref = vendicard_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vendicard_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MANGER_FIELD_NUMBER = 12;
+    private volatile java.lang.Object manger_;
+    /**
+     * <code>string Manger = 12;</code>
+     */
+    public java.lang.String getManger() {
+      java.lang.Object ref = manger_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        manger_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Manger = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMangerBytes() {
+      java.lang.Object ref = manger_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        manger_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLOODGROUP_FIELD_NUMBER = 13;
+    private volatile java.lang.Object bloodgroup_;
+    /**
+     * <code>string bloodgroup = 13;</code>
+     */
+    public java.lang.String getBloodgroup() {
+      java.lang.Object ref = bloodgroup_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bloodgroup_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bloodgroup = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBloodgroupBytes() {
+      java.lang.Object ref = bloodgroup_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bloodgroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMERGENCYPHONENUMBER_FIELD_NUMBER = 14;
+    private long emergencyphonenumber_;
+    /**
+     * <code>int64 emergencyphonenumber = 14;</code>
+     */
+    public long getEmergencyphonenumber() {
+      return emergencyphonenumber_;
+    }
+
+    public static final int PERMANENTADDRESS_FIELD_NUMBER = 15;
+    private com.gl.edfstubs.EmployeeOuterClass.Address permanentaddress_;
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    public boolean hasPermanentaddress() {
+      return permanentaddress_ != null;
+    }
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.Address getPermanentaddress() {
+      return permanentaddress_ == null ? com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : permanentaddress_;
+    }
+    /**
+     * <code>.Address permanentaddress = 15;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getPermanentaddressOrBuilder() {
+      return getPermanentaddress();
+    }
+
+    public static final int TEMPADDRESS_FIELD_NUMBER = 16;
+    private com.gl.edfstubs.EmployeeOuterClass.Address tempaddress_;
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    public boolean hasTempaddress() {
+      return tempaddress_ != null;
+    }
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.Address getTempaddress() {
+      return tempaddress_ == null ? com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : tempaddress_;
+    }
+    /**
+     * <code>.Address tempaddress = 16;</code>
+     */
+    public com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getTempaddressOrBuilder() {
+      return getTempaddress();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1893,6 +1642,54 @@ public final class EmployeeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (employeeid_ != 0L) {
+        output.writeInt64(1, employeeid_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      for (int i = 0; i < projects_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projects_.getRaw(i));
+      }
+      for (int i = 0; i < skills_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, skills_.getRaw(i));
+      }
+      if (phonenumber_ != 0L) {
+        output.writeInt64(5, phonenumber_);
+      }
+      for (int i = 0; i < asset_.size(); i++) {
+        output.writeMessage(6, asset_.get(i));
+      }
+      if (!getSeatnoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, seatno_);
+      }
+      if (!getLdapBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, ldap_);
+      }
+      if (!getClientmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, clientmail_);
+      }
+      if (!getGlmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, glmail_);
+      }
+      if (!getVendicardBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, vendicard_);
+      }
+      if (!getMangerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, manger_);
+      }
+      if (!getBloodgroupBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bloodgroup_);
+      }
+      if (emergencyphonenumber_ != 0L) {
+        output.writeInt64(14, emergencyphonenumber_);
+      }
+      if (permanentaddress_ != null) {
+        output.writeMessage(15, getPermanentaddress());
+      }
+      if (tempaddress_ != null) {
+        output.writeMessage(16, getTempaddress());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1902,6 +1699,70 @@ public final class EmployeeOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (employeeid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, employeeid_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < projects_.size(); i++) {
+          dataSize += computeStringSizeNoTag(projects_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProjectsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < skills_.size(); i++) {
+          dataSize += computeStringSizeNoTag(skills_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSkillsList().size();
+      }
+      if (phonenumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, phonenumber_);
+      }
+      for (int i = 0; i < asset_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, asset_.get(i));
+      }
+      if (!getSeatnoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, seatno_);
+      }
+      if (!getLdapBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, ldap_);
+      }
+      if (!getClientmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, clientmail_);
+      }
+      if (!getGlmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, glmail_);
+      }
+      if (!getVendicardBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, vendicard_);
+      }
+      if (!getMangerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, manger_);
+      }
+      if (!getBloodgroupBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bloodgroup_);
+      }
+      if (emergencyphonenumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, emergencyphonenumber_);
+      }
+      if (permanentaddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getPermanentaddress());
+      }
+      if (tempaddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getTempaddress());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1912,12 +1773,50 @@ public final class EmployeeOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Empty)) {
+      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Employee)) {
         return super.equals(obj);
       }
-      com.gl.edfstubs.EmployeeOuterClass.Empty other = (com.gl.edfstubs.EmployeeOuterClass.Empty) obj;
+      com.gl.edfstubs.EmployeeOuterClass.Employee other = (com.gl.edfstubs.EmployeeOuterClass.Employee) obj;
 
       boolean result = true;
+      result = result && (getEmployeeid()
+          == other.getEmployeeid());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getProjectsList()
+          .equals(other.getProjectsList());
+      result = result && getSkillsList()
+          .equals(other.getSkillsList());
+      result = result && (getPhonenumber()
+          == other.getPhonenumber());
+      result = result && getAssetList()
+          .equals(other.getAssetList());
+      result = result && getSeatno()
+          .equals(other.getSeatno());
+      result = result && getLdap()
+          .equals(other.getLdap());
+      result = result && getClientmail()
+          .equals(other.getClientmail());
+      result = result && getGlmail()
+          .equals(other.getGlmail());
+      result = result && getVendicard()
+          .equals(other.getVendicard());
+      result = result && getManger()
+          .equals(other.getManger());
+      result = result && getBloodgroup()
+          .equals(other.getBloodgroup());
+      result = result && (getEmergencyphonenumber()
+          == other.getEmergencyphonenumber());
+      result = result && (hasPermanentaddress() == other.hasPermanentaddress());
+      if (hasPermanentaddress()) {
+        result = result && getPermanentaddress()
+            .equals(other.getPermanentaddress());
+      }
+      result = result && (hasTempaddress() == other.hasTempaddress());
+      if (hasTempaddress()) {
+        result = result && getTempaddress()
+            .equals(other.getTempaddress());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1929,74 +1828,119 @@ public final class EmployeeOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EMPLOYEEID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEmployeeid());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getProjectsCount() > 0) {
+        hash = (37 * hash) + PROJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectsList().hashCode();
+      }
+      if (getSkillsCount() > 0) {
+        hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+        hash = (53 * hash) + getSkillsList().hashCode();
+      }
+      hash = (37 * hash) + PHONENUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPhonenumber());
+      if (getAssetCount() > 0) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetList().hashCode();
+      }
+      hash = (37 * hash) + SEATNO_FIELD_NUMBER;
+      hash = (53 * hash) + getSeatno().hashCode();
+      hash = (37 * hash) + LDAP_FIELD_NUMBER;
+      hash = (53 * hash) + getLdap().hashCode();
+      hash = (37 * hash) + CLIENTMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getClientmail().hashCode();
+      hash = (37 * hash) + GLMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getGlmail().hashCode();
+      hash = (37 * hash) + VENDICARD_FIELD_NUMBER;
+      hash = (53 * hash) + getVendicard().hashCode();
+      hash = (37 * hash) + MANGER_FIELD_NUMBER;
+      hash = (53 * hash) + getManger().hashCode();
+      hash = (37 * hash) + BLOODGROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getBloodgroup().hashCode();
+      hash = (37 * hash) + EMERGENCYPHONENUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEmergencyphonenumber());
+      if (hasPermanentaddress()) {
+        hash = (37 * hash) + PERMANENTADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermanentaddress().hashCode();
+      }
+      if (hasTempaddress()) {
+        hash = (37 * hash) + TEMPADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getTempaddress().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(byte[] data)
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(java.io.InputStream input)
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseDelimitedFrom(java.io.InputStream input)
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseDelimitedFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2009,7 +1953,7 @@ public final class EmployeeOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Empty prototype) {
+    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Employee prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2025,26 +1969,26 @@ public final class EmployeeOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code Empty}
+     * Protobuf type {@code Employee}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Empty)
-        com.gl.edfstubs.EmployeeOuterClass.EmptyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Employee)
+        com.gl.edfstubs.EmployeeOuterClass.EmployeeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Empty_descriptor;
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Empty_fieldAccessorTable
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.gl.edfstubs.EmployeeOuterClass.Empty.class, com.gl.edfstubs.EmployeeOuterClass.Empty.Builder.class);
+                com.gl.edfstubs.EmployeeOuterClass.Employee.class, com.gl.edfstubs.EmployeeOuterClass.Employee.Builder.class);
       }
 
-      // Construct using com.gl.edfstubs.EmployeeOuterClass.Empty.newBuilder()
+      // Construct using com.gl.edfstubs.EmployeeOuterClass.Employee.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2057,28 +2001,73 @@ public final class EmployeeOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getAssetFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        employeeid_ = 0L;
+
+        name_ = "";
+
+        projects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        phonenumber_ = 0L;
+
+        if (assetBuilder_ == null) {
+          asset_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          assetBuilder_.clear();
+        }
+        seatno_ = "";
+
+        ldap_ = "";
+
+        clientmail_ = "";
+
+        glmail_ = "";
+
+        vendicard_ = "";
+
+        manger_ = "";
+
+        bloodgroup_ = "";
+
+        emergencyphonenumber_ = 0L;
+
+        if (permanentaddressBuilder_ == null) {
+          permanentaddress_ = null;
+        } else {
+          permanentaddress_ = null;
+          permanentaddressBuilder_ = null;
+        }
+        if (tempaddressBuilder_ == null) {
+          tempaddress_ = null;
+        } else {
+          tempaddress_ = null;
+          tempaddressBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Empty_descriptor;
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Employee_descriptor;
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Empty getDefaultInstanceForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.Empty.getDefaultInstance();
+      public com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstanceForType() {
+        return com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Empty build() {
-        com.gl.edfstubs.EmployeeOuterClass.Empty result = buildPartial();
+      public com.gl.edfstubs.EmployeeOuterClass.Employee build() {
+        com.gl.edfstubs.EmployeeOuterClass.Employee result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2086,8 +2075,51 @@ public final class EmployeeOuterClass {
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Empty buildPartial() {
-        com.gl.edfstubs.EmployeeOuterClass.Empty result = new com.gl.edfstubs.EmployeeOuterClass.Empty(this);
+      public com.gl.edfstubs.EmployeeOuterClass.Employee buildPartial() {
+        com.gl.edfstubs.EmployeeOuterClass.Employee result = new com.gl.edfstubs.EmployeeOuterClass.Employee(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.employeeid_ = employeeid_;
+        result.name_ = name_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          projects_ = projects_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.projects_ = projects_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          skills_ = skills_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.skills_ = skills_;
+        result.phonenumber_ = phonenumber_;
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            asset_ = java.util.Collections.unmodifiableList(asset_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.asset_ = asset_;
+        } else {
+          result.asset_ = assetBuilder_.build();
+        }
+        result.seatno_ = seatno_;
+        result.ldap_ = ldap_;
+        result.clientmail_ = clientmail_;
+        result.glmail_ = glmail_;
+        result.vendicard_ = vendicard_;
+        result.manger_ = manger_;
+        result.bloodgroup_ = bloodgroup_;
+        result.emergencyphonenumber_ = emergencyphonenumber_;
+        if (permanentaddressBuilder_ == null) {
+          result.permanentaddress_ = permanentaddress_;
+        } else {
+          result.permanentaddress_ = permanentaddressBuilder_.build();
+        }
+        if (tempaddressBuilder_ == null) {
+          result.tempaddress_ = tempaddress_;
+        } else {
+          result.tempaddress_ = tempaddressBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2126,16 +2158,109 @@ public final class EmployeeOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Empty) {
-          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Empty)other);
+        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Employee) {
+          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Employee)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Empty other) {
-        if (other == com.gl.edfstubs.EmployeeOuterClass.Empty.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Employee other) {
+        if (other == com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance()) return this;
+        if (other.getEmployeeid() != 0L) {
+          setEmployeeid(other.getEmployeeid());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.projects_.isEmpty()) {
+          if (projects_.isEmpty()) {
+            projects_ = other.projects_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureProjectsIsMutable();
+            projects_.addAll(other.projects_);
+          }
+          onChanged();
+        }
+        if (!other.skills_.isEmpty()) {
+          if (skills_.isEmpty()) {
+            skills_ = other.skills_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureSkillsIsMutable();
+            skills_.addAll(other.skills_);
+          }
+          onChanged();
+        }
+        if (other.getPhonenumber() != 0L) {
+          setPhonenumber(other.getPhonenumber());
+        }
+        if (assetBuilder_ == null) {
+          if (!other.asset_.isEmpty()) {
+            if (asset_.isEmpty()) {
+              asset_ = other.asset_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAssetIsMutable();
+              asset_.addAll(other.asset_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.asset_.isEmpty()) {
+            if (assetBuilder_.isEmpty()) {
+              assetBuilder_.dispose();
+              assetBuilder_ = null;
+              asset_ = other.asset_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              assetBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetFieldBuilder() : null;
+            } else {
+              assetBuilder_.addAllMessages(other.asset_);
+            }
+          }
+        }
+        if (!other.getSeatno().isEmpty()) {
+          seatno_ = other.seatno_;
+          onChanged();
+        }
+        if (!other.getLdap().isEmpty()) {
+          ldap_ = other.ldap_;
+          onChanged();
+        }
+        if (!other.getClientmail().isEmpty()) {
+          clientmail_ = other.clientmail_;
+          onChanged();
+        }
+        if (!other.getGlmail().isEmpty()) {
+          glmail_ = other.glmail_;
+          onChanged();
+        }
+        if (!other.getVendicard().isEmpty()) {
+          vendicard_ = other.vendicard_;
+          onChanged();
+        }
+        if (!other.getManger().isEmpty()) {
+          manger_ = other.manger_;
+          onChanged();
+        }
+        if (!other.getBloodgroup().isEmpty()) {
+          bloodgroup_ = other.bloodgroup_;
+          onChanged();
+        }
+        if (other.getEmergencyphonenumber() != 0L) {
+          setEmergencyphonenumber(other.getEmergencyphonenumber());
+        }
+        if (other.hasPermanentaddress()) {
+          mergePermanentaddress(other.getPermanentaddress());
+        }
+        if (other.hasTempaddress()) {
+          mergeTempaddress(other.getTempaddress());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2151,11 +2276,11 @@ public final class EmployeeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.gl.edfstubs.EmployeeOuterClass.Empty parsedMessage = null;
+        com.gl.edfstubs.EmployeeOuterClass.Employee parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Empty) e.getUnfinishedMessage();
+          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Employee) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2163,6 +2288,1299 @@ public final class EmployeeOuterClass {
           }
         }
         return this;
+      }
+      private int bitField0_;
+
+      private long employeeid_ ;
+      /**
+       * <code>int64 employeeid = 1;</code>
+       */
+      public long getEmployeeid() {
+        return employeeid_;
+      }
+      /**
+       * <code>int64 employeeid = 1;</code>
+       */
+      public Builder setEmployeeid(long value) {
+        
+        employeeid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 employeeid = 1;</code>
+       */
+      public Builder clearEmployeeid() {
+        
+        employeeid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList projects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureProjectsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          projects_ = new com.google.protobuf.LazyStringArrayList(projects_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProjectsList() {
+        return projects_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public int getProjectsCount() {
+        return projects_.size();
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public java.lang.String getProjects(int index) {
+        return projects_.get(index);
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectsBytes(int index) {
+        return projects_.getByteString(index);
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public Builder setProjects(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureProjectsIsMutable();
+        projects_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public Builder addProjects(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureProjectsIsMutable();
+        projects_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public Builder addAllProjects(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProjectsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, projects_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public Builder clearProjects() {
+        projects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string projects = 3;</code>
+       */
+      public Builder addProjectsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureProjectsIsMutable();
+        projects_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSkillsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSkillsList() {
+        return skills_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public int getSkillsCount() {
+        return skills_.size();
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public java.lang.String getSkills(int index) {
+        return skills_.get(index);
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSkillsBytes(int index) {
+        return skills_.getByteString(index);
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public Builder setSkills(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSkillsIsMutable();
+        skills_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public Builder addSkills(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSkillsIsMutable();
+        skills_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public Builder addAllSkills(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSkillsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, skills_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public Builder clearSkills() {
+        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string skills = 4;</code>
+       */
+      public Builder addSkillsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSkillsIsMutable();
+        skills_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private long phonenumber_ ;
+      /**
+       * <code>int64 phonenumber = 5;</code>
+       */
+      public long getPhonenumber() {
+        return phonenumber_;
+      }
+      /**
+       * <code>int64 phonenumber = 5;</code>
+       */
+      public Builder setPhonenumber(long value) {
+        
+        phonenumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 phonenumber = 5;</code>
+       */
+      public Builder clearPhonenumber() {
+        
+        phonenumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset> asset_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          asset_ = new java.util.ArrayList<com.gl.edfstubs.EmployeeOuterClass.Asset>(asset_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Asset, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder, com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder> assetBuilder_;
+
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset> getAssetList() {
+        if (assetBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(asset_);
+        } else {
+          return assetBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public int getAssetCount() {
+        if (assetBuilder_ == null) {
+          return asset_.size();
+        } else {
+          return assetBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Asset getAsset(int index) {
+        if (assetBuilder_ == null) {
+          return asset_.get(index);
+        } else {
+          return assetBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder setAsset(
+          int index, com.gl.edfstubs.EmployeeOuterClass.Asset value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetIsMutable();
+          asset_.set(index, value);
+          onChanged();
+        } else {
+          assetBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder setAsset(
+          int index, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          ensureAssetIsMutable();
+          asset_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder addAsset(com.gl.edfstubs.EmployeeOuterClass.Asset value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetIsMutable();
+          asset_.add(value);
+          onChanged();
+        } else {
+          assetBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder addAsset(
+          int index, com.gl.edfstubs.EmployeeOuterClass.Asset value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetIsMutable();
+          asset_.add(index, value);
+          onChanged();
+        } else {
+          assetBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder addAsset(
+          com.gl.edfstubs.EmployeeOuterClass.Asset.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          ensureAssetIsMutable();
+          asset_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder addAsset(
+          int index, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          ensureAssetIsMutable();
+          asset_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder addAllAsset(
+          java.lang.Iterable<? extends com.gl.edfstubs.EmployeeOuterClass.Asset> values) {
+        if (assetBuilder_ == null) {
+          ensureAssetIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, asset_);
+          onChanged();
+        } else {
+          assetBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder clearAsset() {
+        if (assetBuilder_ == null) {
+          asset_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          assetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public Builder removeAsset(int index) {
+        if (assetBuilder_ == null) {
+          ensureAssetIsMutable();
+          asset_.remove(index);
+          onChanged();
+        } else {
+          assetBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Asset.Builder getAssetBuilder(
+          int index) {
+        return getAssetFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder getAssetOrBuilder(
+          int index) {
+        if (assetBuilder_ == null) {
+          return asset_.get(index);  } else {
+          return assetBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public java.util.List<? extends com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder> 
+           getAssetOrBuilderList() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(asset_);
+        }
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Asset.Builder addAssetBuilder() {
+        return getAssetFieldBuilder().addBuilder(
+            com.gl.edfstubs.EmployeeOuterClass.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Asset.Builder addAssetBuilder(
+          int index) {
+        return getAssetFieldBuilder().addBuilder(
+            index, com.gl.edfstubs.EmployeeOuterClass.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Asset asset = 6;</code>
+       */
+      public java.util.List<com.gl.edfstubs.EmployeeOuterClass.Asset.Builder> 
+           getAssetBuilderList() {
+        return getAssetFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Asset, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder, com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gl.edfstubs.EmployeeOuterClass.Asset, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder, com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder>(
+                  asset_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+
+      private java.lang.Object seatno_ = "";
+      /**
+       * <code>string seatno = 7;</code>
+       */
+      public java.lang.String getSeatno() {
+        java.lang.Object ref = seatno_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seatno_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seatno = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSeatnoBytes() {
+        java.lang.Object ref = seatno_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seatno_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seatno = 7;</code>
+       */
+      public Builder setSeatno(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        seatno_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seatno = 7;</code>
+       */
+      public Builder clearSeatno() {
+        
+        seatno_ = getDefaultInstance().getSeatno();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seatno = 7;</code>
+       */
+      public Builder setSeatnoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        seatno_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ldap_ = "";
+      /**
+       * <code>string ldap = 8;</code>
+       */
+      public java.lang.String getLdap() {
+        java.lang.Object ref = ldap_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ldap_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ldap = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLdapBytes() {
+        java.lang.Object ref = ldap_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ldap_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ldap = 8;</code>
+       */
+      public Builder setLdap(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ldap_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ldap = 8;</code>
+       */
+      public Builder clearLdap() {
+        
+        ldap_ = getDefaultInstance().getLdap();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ldap = 8;</code>
+       */
+      public Builder setLdapBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ldap_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientmail_ = "";
+      /**
+       * <code>string clientmail = 9;</code>
+       */
+      public java.lang.String getClientmail() {
+        java.lang.Object ref = clientmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string clientmail = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClientmailBytes() {
+        java.lang.Object ref = clientmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string clientmail = 9;</code>
+       */
+      public Builder setClientmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clientmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string clientmail = 9;</code>
+       */
+      public Builder clearClientmail() {
+        
+        clientmail_ = getDefaultInstance().getClientmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string clientmail = 9;</code>
+       */
+      public Builder setClientmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clientmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object glmail_ = "";
+      /**
+       * <code>string glmail = 10;</code>
+       */
+      public java.lang.String getGlmail() {
+        java.lang.Object ref = glmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          glmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string glmail = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGlmailBytes() {
+        java.lang.Object ref = glmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          glmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string glmail = 10;</code>
+       */
+      public Builder setGlmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        glmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string glmail = 10;</code>
+       */
+      public Builder clearGlmail() {
+        
+        glmail_ = getDefaultInstance().getGlmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string glmail = 10;</code>
+       */
+      public Builder setGlmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        glmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vendicard_ = "";
+      /**
+       * <code>string vendicard = 11;</code>
+       */
+      public java.lang.String getVendicard() {
+        java.lang.Object ref = vendicard_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vendicard_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vendicard = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVendicardBytes() {
+        java.lang.Object ref = vendicard_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vendicard_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vendicard = 11;</code>
+       */
+      public Builder setVendicard(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        vendicard_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vendicard = 11;</code>
+       */
+      public Builder clearVendicard() {
+        
+        vendicard_ = getDefaultInstance().getVendicard();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vendicard = 11;</code>
+       */
+      public Builder setVendicardBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        vendicard_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object manger_ = "";
+      /**
+       * <code>string Manger = 12;</code>
+       */
+      public java.lang.String getManger() {
+        java.lang.Object ref = manger_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          manger_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Manger = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMangerBytes() {
+        java.lang.Object ref = manger_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          manger_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Manger = 12;</code>
+       */
+      public Builder setManger(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        manger_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Manger = 12;</code>
+       */
+      public Builder clearManger() {
+        
+        manger_ = getDefaultInstance().getManger();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Manger = 12;</code>
+       */
+      public Builder setMangerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        manger_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bloodgroup_ = "";
+      /**
+       * <code>string bloodgroup = 13;</code>
+       */
+      public java.lang.String getBloodgroup() {
+        java.lang.Object ref = bloodgroup_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bloodgroup_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bloodgroup = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBloodgroupBytes() {
+        java.lang.Object ref = bloodgroup_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bloodgroup_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bloodgroup = 13;</code>
+       */
+      public Builder setBloodgroup(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bloodgroup_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bloodgroup = 13;</code>
+       */
+      public Builder clearBloodgroup() {
+        
+        bloodgroup_ = getDefaultInstance().getBloodgroup();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bloodgroup = 13;</code>
+       */
+      public Builder setBloodgroupBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bloodgroup_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long emergencyphonenumber_ ;
+      /**
+       * <code>int64 emergencyphonenumber = 14;</code>
+       */
+      public long getEmergencyphonenumber() {
+        return emergencyphonenumber_;
+      }
+      /**
+       * <code>int64 emergencyphonenumber = 14;</code>
+       */
+      public Builder setEmergencyphonenumber(long value) {
+        
+        emergencyphonenumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 emergencyphonenumber = 14;</code>
+       */
+      public Builder clearEmergencyphonenumber() {
+        
+        emergencyphonenumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.gl.edfstubs.EmployeeOuterClass.Address permanentaddress_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder> permanentaddressBuilder_;
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public boolean hasPermanentaddress() {
+        return permanentaddressBuilder_ != null || permanentaddress_ != null;
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Address getPermanentaddress() {
+        if (permanentaddressBuilder_ == null) {
+          return permanentaddress_ == null ? com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : permanentaddress_;
+        } else {
+          return permanentaddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public Builder setPermanentaddress(com.gl.edfstubs.EmployeeOuterClass.Address value) {
+        if (permanentaddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          permanentaddress_ = value;
+          onChanged();
+        } else {
+          permanentaddressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public Builder setPermanentaddress(
+          com.gl.edfstubs.EmployeeOuterClass.Address.Builder builderForValue) {
+        if (permanentaddressBuilder_ == null) {
+          permanentaddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          permanentaddressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public Builder mergePermanentaddress(com.gl.edfstubs.EmployeeOuterClass.Address value) {
+        if (permanentaddressBuilder_ == null) {
+          if (permanentaddress_ != null) {
+            permanentaddress_ =
+              com.gl.edfstubs.EmployeeOuterClass.Address.newBuilder(permanentaddress_).mergeFrom(value).buildPartial();
+          } else {
+            permanentaddress_ = value;
+          }
+          onChanged();
+        } else {
+          permanentaddressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public Builder clearPermanentaddress() {
+        if (permanentaddressBuilder_ == null) {
+          permanentaddress_ = null;
+          onChanged();
+        } else {
+          permanentaddress_ = null;
+          permanentaddressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Address.Builder getPermanentaddressBuilder() {
+        
+        onChanged();
+        return getPermanentaddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getPermanentaddressOrBuilder() {
+        if (permanentaddressBuilder_ != null) {
+          return permanentaddressBuilder_.getMessageOrBuilder();
+        } else {
+          return permanentaddress_ == null ?
+              com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : permanentaddress_;
+        }
+      }
+      /**
+       * <code>.Address permanentaddress = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder> 
+          getPermanentaddressFieldBuilder() {
+        if (permanentaddressBuilder_ == null) {
+          permanentaddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder>(
+                  getPermanentaddress(),
+                  getParentForChildren(),
+                  isClean());
+          permanentaddress_ = null;
+        }
+        return permanentaddressBuilder_;
+      }
+
+      private com.gl.edfstubs.EmployeeOuterClass.Address tempaddress_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder> tempaddressBuilder_;
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public boolean hasTempaddress() {
+        return tempaddressBuilder_ != null || tempaddress_ != null;
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Address getTempaddress() {
+        if (tempaddressBuilder_ == null) {
+          return tempaddress_ == null ? com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : tempaddress_;
+        } else {
+          return tempaddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public Builder setTempaddress(com.gl.edfstubs.EmployeeOuterClass.Address value) {
+        if (tempaddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tempaddress_ = value;
+          onChanged();
+        } else {
+          tempaddressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public Builder setTempaddress(
+          com.gl.edfstubs.EmployeeOuterClass.Address.Builder builderForValue) {
+        if (tempaddressBuilder_ == null) {
+          tempaddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          tempaddressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public Builder mergeTempaddress(com.gl.edfstubs.EmployeeOuterClass.Address value) {
+        if (tempaddressBuilder_ == null) {
+          if (tempaddress_ != null) {
+            tempaddress_ =
+              com.gl.edfstubs.EmployeeOuterClass.Address.newBuilder(tempaddress_).mergeFrom(value).buildPartial();
+          } else {
+            tempaddress_ = value;
+          }
+          onChanged();
+        } else {
+          tempaddressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public Builder clearTempaddress() {
+        if (tempaddressBuilder_ == null) {
+          tempaddress_ = null;
+          onChanged();
+        } else {
+          tempaddress_ = null;
+          tempaddressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.Address.Builder getTempaddressBuilder() {
+        
+        onChanged();
+        return getTempaddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      public com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder getTempaddressOrBuilder() {
+        if (tempaddressBuilder_ != null) {
+          return tempaddressBuilder_.getMessageOrBuilder();
+        } else {
+          return tempaddress_ == null ?
+              com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance() : tempaddress_;
+        }
+      }
+      /**
+       * <code>.Address tempaddress = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder> 
+          getTempaddressFieldBuilder() {
+        if (tempaddressBuilder_ == null) {
+          tempaddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gl.edfstubs.EmployeeOuterClass.Address, com.gl.edfstubs.EmployeeOuterClass.Address.Builder, com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder>(
+                  getTempaddress(),
+                  getParentForChildren(),
+                  isClean());
+          tempaddress_ = null;
+        }
+        return tempaddressBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2177,74 +3595,85 @@ public final class EmployeeOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Empty)
+      // @@protoc_insertion_point(builder_scope:Employee)
     }
 
-    // @@protoc_insertion_point(class_scope:Empty)
-    private static final com.gl.edfstubs.EmployeeOuterClass.Empty DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:Employee)
+    private static final com.gl.edfstubs.EmployeeOuterClass.Employee DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Empty();
+      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Employee();
     }
 
-    public static com.gl.edfstubs.EmployeeOuterClass.Empty getDefaultInstance() {
+    public static com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Empty>
-        PARSER = new com.google.protobuf.AbstractParser<Empty>() {
+    private static final com.google.protobuf.Parser<Employee>
+        PARSER = new com.google.protobuf.AbstractParser<Employee>() {
       @java.lang.Override
-      public Empty parsePartialFrom(
+      public Employee parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Empty(input, extensionRegistry);
+        return new Employee(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Empty> parser() {
+    public static com.google.protobuf.Parser<Employee> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Empty> getParserForType() {
+    public com.google.protobuf.Parser<Employee> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.gl.edfstubs.EmployeeOuterClass.Empty getDefaultInstanceForType() {
+    public com.gl.edfstubs.EmployeeOuterClass.Employee getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Response)
+  public interface AssetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Asset)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>string assetnumber = 1;</code>
      */
-    java.lang.String getResponsemessage();
+    java.lang.String getAssetnumber();
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>string assetnumber = 1;</code>
      */
     com.google.protobuf.ByteString
-        getResponsemessageBytes();
+        getAssetnumberBytes();
+
+    /**
+     * <code>string assettye = 2;</code>
+     */
+    java.lang.String getAssettye();
+    /**
+     * <code>string assettye = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAssettyeBytes();
   }
   /**
-   * Protobuf type {@code Response}
+   * Protobuf type {@code Asset}
    */
-  public  static final class Response extends
+  public  static final class Asset extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Response)
-      ResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:Asset)
+      AssetOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Response.newBuilder() to construct.
-    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Asset.newBuilder() to construct.
+    private Asset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Response() {
-      responsemessage_ = "";
+    private Asset() {
+      assetnumber_ = "";
+      assettye_ = "";
     }
 
     @java.lang.Override
@@ -2252,7 +3681,7 @@ public final class EmployeeOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Response(
+    private Asset(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2274,7 +3703,13 @@ public final class EmployeeOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              responsemessage_ = s;
+              assetnumber_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assettye_ = s;
               break;
             }
             default: {
@@ -2298,45 +3733,79 @@ public final class EmployeeOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Response_descriptor;
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Asset_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Response_fieldAccessorTable
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Asset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.gl.edfstubs.EmployeeOuterClass.Response.class, com.gl.edfstubs.EmployeeOuterClass.Response.Builder.class);
+              com.gl.edfstubs.EmployeeOuterClass.Asset.class, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder.class);
     }
 
-    public static final int RESPONSEMESSAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object responsemessage_;
+    public static final int ASSETNUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object assetnumber_;
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>string assetnumber = 1;</code>
      */
-    public java.lang.String getResponsemessage() {
-      java.lang.Object ref = responsemessage_;
+    public java.lang.String getAssetnumber() {
+      java.lang.Object ref = assetnumber_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        responsemessage_ = s;
+        assetnumber_ = s;
         return s;
       }
     }
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>string assetnumber = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getResponsemessageBytes() {
-      java.lang.Object ref = responsemessage_;
+        getAssetnumberBytes() {
+      java.lang.Object ref = assetnumber_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        responsemessage_ = b;
+        assetnumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETTYE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object assettye_;
+    /**
+     * <code>string assettye = 2;</code>
+     */
+    public java.lang.String getAssettye() {
+      java.lang.Object ref = assettye_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assettye_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string assettye = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAssettyeBytes() {
+      java.lang.Object ref = assettye_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assettye_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2357,8 +3826,11 @@ public final class EmployeeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResponsemessageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, responsemessage_);
+      if (!getAssetnumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assetnumber_);
+      }
+      if (!getAssettyeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, assettye_);
       }
       unknownFields.writeTo(output);
     }
@@ -2369,8 +3841,11 @@ public final class EmployeeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResponsemessageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, responsemessage_);
+      if (!getAssetnumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assetnumber_);
+      }
+      if (!getAssettyeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, assettye_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2382,14 +3857,16 @@ public final class EmployeeOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Response)) {
+      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Asset)) {
         return super.equals(obj);
       }
-      com.gl.edfstubs.EmployeeOuterClass.Response other = (com.gl.edfstubs.EmployeeOuterClass.Response) obj;
+      com.gl.edfstubs.EmployeeOuterClass.Asset other = (com.gl.edfstubs.EmployeeOuterClass.Asset) obj;
 
       boolean result = true;
-      result = result && getResponsemessage()
-          .equals(other.getResponsemessage());
+      result = result && getAssetnumber()
+          .equals(other.getAssetnumber());
+      result = result && getAssettye()
+          .equals(other.getAssettye());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2401,76 +3878,78 @@ public final class EmployeeOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESPONSEMESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getResponsemessage().hashCode();
+      hash = (37 * hash) + ASSETNUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetnumber().hashCode();
+      hash = (37 * hash) + ASSETTYE_FIELD_NUMBER;
+      hash = (53 * hash) + getAssettye().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(byte[] data)
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(java.io.InputStream input)
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseDelimitedFrom(java.io.InputStream input)
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseDelimitedFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gl.edfstubs.EmployeeOuterClass.Response parseFrom(
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2483,7 +3962,7 @@ public final class EmployeeOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Response prototype) {
+    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Asset prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2499,26 +3978,26 @@ public final class EmployeeOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code Response}
+     * Protobuf type {@code Asset}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Response)
-        com.gl.edfstubs.EmployeeOuterClass.ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Asset)
+        com.gl.edfstubs.EmployeeOuterClass.AssetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Response_descriptor;
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Asset_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Response_fieldAccessorTable
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Asset_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.gl.edfstubs.EmployeeOuterClass.Response.class, com.gl.edfstubs.EmployeeOuterClass.Response.Builder.class);
+                com.gl.edfstubs.EmployeeOuterClass.Asset.class, com.gl.edfstubs.EmployeeOuterClass.Asset.Builder.class);
       }
 
-      // Construct using com.gl.edfstubs.EmployeeOuterClass.Response.newBuilder()
+      // Construct using com.gl.edfstubs.EmployeeOuterClass.Asset.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2536,7 +4015,9 @@ public final class EmployeeOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        responsemessage_ = "";
+        assetnumber_ = "";
+
+        assettye_ = "";
 
         return this;
       }
@@ -2544,17 +4025,17 @@ public final class EmployeeOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Response_descriptor;
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Asset_descriptor;
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Response getDefaultInstanceForType() {
-        return com.gl.edfstubs.EmployeeOuterClass.Response.getDefaultInstance();
+      public com.gl.edfstubs.EmployeeOuterClass.Asset getDefaultInstanceForType() {
+        return com.gl.edfstubs.EmployeeOuterClass.Asset.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Response build() {
-        com.gl.edfstubs.EmployeeOuterClass.Response result = buildPartial();
+      public com.gl.edfstubs.EmployeeOuterClass.Asset build() {
+        com.gl.edfstubs.EmployeeOuterClass.Asset result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2562,9 +4043,10 @@ public final class EmployeeOuterClass {
       }
 
       @java.lang.Override
-      public com.gl.edfstubs.EmployeeOuterClass.Response buildPartial() {
-        com.gl.edfstubs.EmployeeOuterClass.Response result = new com.gl.edfstubs.EmployeeOuterClass.Response(this);
-        result.responsemessage_ = responsemessage_;
+      public com.gl.edfstubs.EmployeeOuterClass.Asset buildPartial() {
+        com.gl.edfstubs.EmployeeOuterClass.Asset result = new com.gl.edfstubs.EmployeeOuterClass.Asset(this);
+        result.assetnumber_ = assetnumber_;
+        result.assettye_ = assettye_;
         onBuilt();
         return result;
       }
@@ -2603,18 +4085,22 @@ public final class EmployeeOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Response) {
-          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Response)other);
+        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Asset) {
+          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Asset)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Response other) {
-        if (other == com.gl.edfstubs.EmployeeOuterClass.Response.getDefaultInstance()) return this;
-        if (!other.getResponsemessage().isEmpty()) {
-          responsemessage_ = other.responsemessage_;
+      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Asset other) {
+        if (other == com.gl.edfstubs.EmployeeOuterClass.Asset.getDefaultInstance()) return this;
+        if (!other.getAssetnumber().isEmpty()) {
+          assetnumber_ = other.assetnumber_;
+          onChanged();
+        }
+        if (!other.getAssettye().isEmpty()) {
+          assettye_ = other.assettye_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2632,11 +4118,11 @@ public final class EmployeeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.gl.edfstubs.EmployeeOuterClass.Response parsedMessage = null;
+        com.gl.edfstubs.EmployeeOuterClass.Asset parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Response) e.getUnfinishedMessage();
+          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Asset) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2646,71 +4132,140 @@ public final class EmployeeOuterClass {
         return this;
       }
 
-      private java.lang.Object responsemessage_ = "";
+      private java.lang.Object assetnumber_ = "";
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string assetnumber = 1;</code>
        */
-      public java.lang.String getResponsemessage() {
-        java.lang.Object ref = responsemessage_;
+      public java.lang.String getAssetnumber() {
+        java.lang.Object ref = assetnumber_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          responsemessage_ = s;
+          assetnumber_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string assetnumber = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getResponsemessageBytes() {
-        java.lang.Object ref = responsemessage_;
+          getAssetnumberBytes() {
+        java.lang.Object ref = assetnumber_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          responsemessage_ = b;
+          assetnumber_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string assetnumber = 1;</code>
        */
-      public Builder setResponsemessage(
+      public Builder setAssetnumber(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        responsemessage_ = value;
+        assetnumber_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string assetnumber = 1;</code>
        */
-      public Builder clearResponsemessage() {
+      public Builder clearAssetnumber() {
         
-        responsemessage_ = getDefaultInstance().getResponsemessage();
+        assetnumber_ = getDefaultInstance().getAssetnumber();
         onChanged();
         return this;
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string assetnumber = 1;</code>
        */
-      public Builder setResponsemessageBytes(
+      public Builder setAssetnumberBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        responsemessage_ = value;
+        assetnumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object assettye_ = "";
+      /**
+       * <code>string assettye = 2;</code>
+       */
+      public java.lang.String getAssettye() {
+        java.lang.Object ref = assettye_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assettye_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string assettye = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAssettyeBytes() {
+        java.lang.Object ref = assettye_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assettye_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string assettye = 2;</code>
+       */
+      public Builder setAssettye(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assettye_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assettye = 2;</code>
+       */
+      public Builder clearAssettye() {
+        
+        assettye_ = getDefaultInstance().getAssettye();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assettye = 2;</code>
+       */
+      public Builder setAssettyeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assettye_ = value;
         onChanged();
         return this;
       }
@@ -2727,66 +4282,1228 @@ public final class EmployeeOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Response)
+      // @@protoc_insertion_point(builder_scope:Asset)
     }
 
-    // @@protoc_insertion_point(class_scope:Response)
-    private static final com.gl.edfstubs.EmployeeOuterClass.Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:Asset)
+    private static final com.gl.edfstubs.EmployeeOuterClass.Asset DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Response();
+      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Asset();
     }
 
-    public static com.gl.edfstubs.EmployeeOuterClass.Response getDefaultInstance() {
+    public static com.gl.edfstubs.EmployeeOuterClass.Asset getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Response>
-        PARSER = new com.google.protobuf.AbstractParser<Response>() {
+    private static final com.google.protobuf.Parser<Asset>
+        PARSER = new com.google.protobuf.AbstractParser<Asset>() {
       @java.lang.Override
-      public Response parsePartialFrom(
+      public Asset parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Response(input, extensionRegistry);
+        return new Asset(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Response> parser() {
+    public static com.google.protobuf.Parser<Asset> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Response> getParserForType() {
+    public com.google.protobuf.Parser<Asset> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.gl.edfstubs.EmployeeOuterClass.Response getDefaultInstanceForType() {
+    public com.gl.edfstubs.EmployeeOuterClass.Asset getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string addressline1 = 1;</code>
+     */
+    java.lang.String getAddressline1();
+    /**
+     * <code>string addressline1 = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressline1Bytes();
+
+    /**
+     * <code>string addressline2 = 2;</code>
+     */
+    java.lang.String getAddressline2();
+    /**
+     * <code>string addressline2 = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressline2Bytes();
+
+    /**
+     * <code>string district = 3;</code>
+     */
+    java.lang.String getDistrict();
+    /**
+     * <code>string district = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDistrictBytes();
+
+    /**
+     * <code>string state = 4;</code>
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <code>string country = 5;</code>
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>string country = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>int64 zipcode = 6;</code>
+     */
+    long getZipcode();
+  }
+  /**
+   * Protobuf type {@code Address}
+   */
+  public  static final class Address extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Address)
+      AddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Address.newBuilder() to construct.
+    private Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Address() {
+      addressline1_ = "";
+      addressline2_ = "";
+      district_ = "";
+      state_ = "";
+      country_ = "";
+      zipcode_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              addressline1_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              addressline2_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              district_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              country_ = s;
+              break;
+            }
+            case 48: {
+
+              zipcode_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Address_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gl.edfstubs.EmployeeOuterClass.internal_static_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gl.edfstubs.EmployeeOuterClass.Address.class, com.gl.edfstubs.EmployeeOuterClass.Address.Builder.class);
+    }
+
+    public static final int ADDRESSLINE1_FIELD_NUMBER = 1;
+    private volatile java.lang.Object addressline1_;
+    /**
+     * <code>string addressline1 = 1;</code>
+     */
+    public java.lang.String getAddressline1() {
+      java.lang.Object ref = addressline1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addressline1_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string addressline1 = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressline1Bytes() {
+      java.lang.Object ref = addressline1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressline1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESSLINE2_FIELD_NUMBER = 2;
+    private volatile java.lang.Object addressline2_;
+    /**
+     * <code>string addressline2 = 2;</code>
+     */
+    public java.lang.String getAddressline2() {
+      java.lang.Object ref = addressline2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addressline2_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string addressline2 = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressline2Bytes() {
+      java.lang.Object ref = addressline2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressline2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISTRICT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object district_;
+    /**
+     * <code>string district = 3;</code>
+     */
+    public java.lang.String getDistrict() {
+      java.lang.Object ref = district_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        district_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string district = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDistrictBytes() {
+      java.lang.Object ref = district_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        district_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object state_;
+    /**
+     * <code>string state = 4;</code>
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object country_;
+    /**
+     * <code>string country = 5;</code>
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        country_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string country = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZIPCODE_FIELD_NUMBER = 6;
+    private long zipcode_;
+    /**
+     * <code>int64 zipcode = 6;</code>
+     */
+    public long getZipcode() {
+      return zipcode_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressline1Bytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addressline1_);
+      }
+      if (!getAddressline2Bytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addressline2_);
+      }
+      if (!getDistrictBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, district_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, state_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, country_);
+      }
+      if (zipcode_ != 0L) {
+        output.writeInt64(6, zipcode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressline1Bytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addressline1_);
+      }
+      if (!getAddressline2Bytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, addressline2_);
+      }
+      if (!getDistrictBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, district_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, state_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, country_);
+      }
+      if (zipcode_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, zipcode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gl.edfstubs.EmployeeOuterClass.Address)) {
+        return super.equals(obj);
+      }
+      com.gl.edfstubs.EmployeeOuterClass.Address other = (com.gl.edfstubs.EmployeeOuterClass.Address) obj;
+
+      boolean result = true;
+      result = result && getAddressline1()
+          .equals(other.getAddressline1());
+      result = result && getAddressline2()
+          .equals(other.getAddressline2());
+      result = result && getDistrict()
+          .equals(other.getDistrict());
+      result = result && getState()
+          .equals(other.getState());
+      result = result && getCountry()
+          .equals(other.getCountry());
+      result = result && (getZipcode()
+          == other.getZipcode());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESSLINE1_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressline1().hashCode();
+      hash = (37 * hash) + ADDRESSLINE2_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressline2().hashCode();
+      hash = (37 * hash) + DISTRICT_FIELD_NUMBER;
+      hash = (53 * hash) + getDistrict().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getCountry().hashCode();
+      hash = (37 * hash) + ZIPCODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZipcode());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gl.edfstubs.EmployeeOuterClass.Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gl.edfstubs.EmployeeOuterClass.Address prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Address)
+        com.gl.edfstubs.EmployeeOuterClass.AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Address_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gl.edfstubs.EmployeeOuterClass.Address.class, com.gl.edfstubs.EmployeeOuterClass.Address.Builder.class);
+      }
+
+      // Construct using com.gl.edfstubs.EmployeeOuterClass.Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        addressline1_ = "";
+
+        addressline2_ = "";
+
+        district_ = "";
+
+        state_ = "";
+
+        country_ = "";
+
+        zipcode_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gl.edfstubs.EmployeeOuterClass.internal_static_Address_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gl.edfstubs.EmployeeOuterClass.Address getDefaultInstanceForType() {
+        return com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gl.edfstubs.EmployeeOuterClass.Address build() {
+        com.gl.edfstubs.EmployeeOuterClass.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gl.edfstubs.EmployeeOuterClass.Address buildPartial() {
+        com.gl.edfstubs.EmployeeOuterClass.Address result = new com.gl.edfstubs.EmployeeOuterClass.Address(this);
+        result.addressline1_ = addressline1_;
+        result.addressline2_ = addressline2_;
+        result.district_ = district_;
+        result.state_ = state_;
+        result.country_ = country_;
+        result.zipcode_ = zipcode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gl.edfstubs.EmployeeOuterClass.Address) {
+          return mergeFrom((com.gl.edfstubs.EmployeeOuterClass.Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gl.edfstubs.EmployeeOuterClass.Address other) {
+        if (other == com.gl.edfstubs.EmployeeOuterClass.Address.getDefaultInstance()) return this;
+        if (!other.getAddressline1().isEmpty()) {
+          addressline1_ = other.addressline1_;
+          onChanged();
+        }
+        if (!other.getAddressline2().isEmpty()) {
+          addressline2_ = other.addressline2_;
+          onChanged();
+        }
+        if (!other.getDistrict().isEmpty()) {
+          district_ = other.district_;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
+        if (!other.getCountry().isEmpty()) {
+          country_ = other.country_;
+          onChanged();
+        }
+        if (other.getZipcode() != 0L) {
+          setZipcode(other.getZipcode());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.gl.edfstubs.EmployeeOuterClass.Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.gl.edfstubs.EmployeeOuterClass.Address) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object addressline1_ = "";
+      /**
+       * <code>string addressline1 = 1;</code>
+       */
+      public java.lang.String getAddressline1() {
+        java.lang.Object ref = addressline1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addressline1_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string addressline1 = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressline1Bytes() {
+        java.lang.Object ref = addressline1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressline1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string addressline1 = 1;</code>
+       */
+      public Builder setAddressline1(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        addressline1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string addressline1 = 1;</code>
+       */
+      public Builder clearAddressline1() {
+        
+        addressline1_ = getDefaultInstance().getAddressline1();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string addressline1 = 1;</code>
+       */
+      public Builder setAddressline1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        addressline1_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addressline2_ = "";
+      /**
+       * <code>string addressline2 = 2;</code>
+       */
+      public java.lang.String getAddressline2() {
+        java.lang.Object ref = addressline2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addressline2_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string addressline2 = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressline2Bytes() {
+        java.lang.Object ref = addressline2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressline2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string addressline2 = 2;</code>
+       */
+      public Builder setAddressline2(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        addressline2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string addressline2 = 2;</code>
+       */
+      public Builder clearAddressline2() {
+        
+        addressline2_ = getDefaultInstance().getAddressline2();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string addressline2 = 2;</code>
+       */
+      public Builder setAddressline2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        addressline2_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object district_ = "";
+      /**
+       * <code>string district = 3;</code>
+       */
+      public java.lang.String getDistrict() {
+        java.lang.Object ref = district_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          district_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string district = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDistrictBytes() {
+        java.lang.Object ref = district_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          district_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string district = 3;</code>
+       */
+      public Builder setDistrict(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        district_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string district = 3;</code>
+       */
+      public Builder clearDistrict() {
+        
+        district_ = getDefaultInstance().getDistrict();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string district = 3;</code>
+       */
+      public Builder setDistrictBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        district_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 4;</code>
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>string country = 5;</code>
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          country_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country = 5;</code>
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 5;</code>
+       */
+      public Builder clearCountry() {
+        
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 5;</code>
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long zipcode_ ;
+      /**
+       * <code>int64 zipcode = 6;</code>
+       */
+      public long getZipcode() {
+        return zipcode_;
+      }
+      /**
+       * <code>int64 zipcode = 6;</code>
+       */
+      public Builder setZipcode(long value) {
+        
+        zipcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 zipcode = 6;</code>
+       */
+      public Builder clearZipcode() {
+        
+        zipcode_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Address)
+    }
+
+    // @@protoc_insertion_point(class_scope:Address)
+    private static final com.gl.edfstubs.EmployeeOuterClass.Address DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gl.edfstubs.EmployeeOuterClass.Address();
+    }
+
+    public static com.gl.edfstubs.EmployeeOuterClass.Address getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Address>
+        PARSER = new com.google.protobuf.AbstractParser<Address>() {
+      @java.lang.Override
+      public Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Address(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Address> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Address> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gl.edfstubs.EmployeeOuterClass.Address getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Employee_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Employee_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Employees_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Employees_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Empty_descriptor;
+    internal_static_Employee_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Empty_fieldAccessorTable;
+      internal_static_Employee_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Response_descriptor;
+    internal_static_Asset_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Response_fieldAccessorTable;
+      internal_static_Asset_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Address_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Address_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2796,16 +5513,21 @@ public final class EmployeeOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016Employee.proto\"b\n\010Employee\022\022\n\nemployee" +
-      "id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\017\n\007project\030\003 \001(\t\022" +
-      "\016\n\006skills\030\004 \003(\t\022\023\n\013phonenumber\030\005 \001(\003\"(\n\t" +
-      "Employees\022\033\n\010employee\030\001 \003(\0132\t.Employee\"\007" +
-      "\n\005Empty\"#\n\010Response\022\027\n\017responsemessage\030\001" +
-      " \001(\t2\200\001\n\017EmployeeDetails\022\"\n\014allemployees" +
-      "\022\006.Empty\032\n.Employees\022$\n\014editemployee\022\t.E" +
-      "mployee\032\t.Response\022#\n\013addemployee\022\t.Empl" +
-      "oyee\032\t.ResponseB\021\n\017com.gl.edfstubsb\006prot" +
-      "o3"
+      "\n\016Employee.proto\"#\n\tEmployees\022\026\n\003emp\030\001 \003" +
+      "(\0132\t.Employee\"\324\002\n\010Employee\022\022\n\nemployeeid" +
+      "\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010projects\030\003 \003(\t\022\016" +
+      "\n\006skills\030\004 \003(\t\022\023\n\013phonenumber\030\005 \001(\003\022\025\n\005a" +
+      "sset\030\006 \003(\0132\006.Asset\022\016\n\006seatno\030\007 \001(\t\022\014\n\004ld" +
+      "ap\030\010 \001(\t\022\022\n\nclientmail\030\t \001(\t\022\016\n\006glmail\030\n" +
+      " \001(\t\022\021\n\tvendicard\030\013 \001(\t\022\016\n\006Manger\030\014 \001(\t\022" +
+      "\022\n\nbloodgroup\030\r \001(\t\022\034\n\024emergencyphonenum" +
+      "ber\030\016 \001(\003\022\"\n\020permanentaddress\030\017 \001(\0132\010.Ad" +
+      "dress\022\035\n\013tempaddress\030\020 \001(\0132\010.Address\".\n\005" +
+      "Asset\022\023\n\013assetnumber\030\001 \001(\t\022\020\n\010assettye\030\002" +
+      " \001(\t\"x\n\007Address\022\024\n\014addressline1\030\001 \001(\t\022\024\n" +
+      "\014addressline2\030\002 \001(\t\022\020\n\010district\030\003 \001(\t\022\r\n" +
+      "\005state\030\004 \001(\t\022\017\n\007country\030\005 \001(\t\022\017\n\007zipcode" +
+      "\030\006 \001(\003B\021\n\017com.gl.edfstubsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2819,30 +5541,30 @@ public final class EmployeeOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_Employee_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Employee_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Employee_descriptor,
-        new java.lang.String[] { "Employeeid", "Name", "Project", "Skills", "Phonenumber", });
     internal_static_Employees_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_Employees_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Employees_descriptor,
-        new java.lang.String[] { "Employee", });
-    internal_static_Empty_descriptor =
+        new java.lang.String[] { "Emp", });
+    internal_static_Employee_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Employee_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Employee_descriptor,
+        new java.lang.String[] { "Employeeid", "Name", "Projects", "Skills", "Phonenumber", "Asset", "Seatno", "Ldap", "Clientmail", "Glmail", "Vendicard", "Manger", "Bloodgroup", "Emergencyphonenumber", "Permanentaddress", "Tempaddress", });
+    internal_static_Asset_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_Empty_fieldAccessorTable = new
+    internal_static_Asset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Empty_descriptor,
-        new java.lang.String[] { });
-    internal_static_Response_descriptor =
+        internal_static_Asset_descriptor,
+        new java.lang.String[] { "Assetnumber", "Assettye", });
+    internal_static_Address_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_Response_fieldAccessorTable = new
+    internal_static_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Response_descriptor,
-        new java.lang.String[] { "Responsemessage", });
+        internal_static_Address_descriptor,
+        new java.lang.String[] { "Addressline1", "Addressline2", "District", "State", "Country", "Zipcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

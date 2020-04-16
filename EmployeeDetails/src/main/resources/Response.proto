@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "com.gl.edfstubs";
+message Empty
+{
+}
+
+message Response
+{
+string  responsemessage = 1;
+}

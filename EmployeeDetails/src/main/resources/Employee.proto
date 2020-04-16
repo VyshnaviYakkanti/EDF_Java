@@ -1,33 +1,42 @@
-syntax = "proto3";
+syntax = "proto3" ;
 
 option java_package = "com.gl.edfstubs";
 
-service EmployeeDetails{
-
-    rpc allemployees(Empty) returns (Employees);
-    rpc editemployee(Employee) returns (Response);
-    rpc addemployee(Employee) returns (Response);
-}
-
+message Employees
+	{
+	repeated Employee emp= 1;
+	}
 message Employee
-		{
+	{
 		int64 employeeid = 1;
 		string name = 2;
-		string project = 3;
+		repeated string projects = 3;
 		repeated string skills = 4;
 		int64 phonenumber = 5;
-		}	
-
-message Employees{
-
-	repeated Employee employee= 1;
-}
-
-message Empty
+		repeated Asset asset = 6 ;
+		string seatno = 7;
+		string ldap = 8;
+		string clientmail= 9;
+		string glmail = 10;
+		string vendicard = 11;
+		string Manger = 12 ;
+		string bloodgroup = 13;
+		int64 emergencyphonenumber = 14;
+		Address permanentaddress = 15;
+		Address tempaddress = 16;		
+	}
+message Asset
 {
+	string assetnumber = 1;
+	string assettye = 2;
 }
-
-message Response
+		
+message Address
 {
-string  responsemessage = 1;
+	string addressline1 = 1;
+	string addressline2 = 2;
+	string district = 3;
+	string state = 4;
+	string country = 5;
+	int64 zipcode = 6 ;
 }
