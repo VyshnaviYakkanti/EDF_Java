@@ -43,15 +43,24 @@
     		<groupId>com.google.auth</groupId>
     		<artifactId>google-auth-library-oauth2-http</artifactId>
     		<version>0.20.0</version>
-		</dependency>		
+		</dependency>	
+		<dependency>
+    <groupId>com.google.api.grpc</groupId>
+    <artifactId>proto-google-common-protos</artifactId>
+    <version>1.17.0</version>
+</dependency>
+		<dependency>
+  <groupId>com.google.api-client</groupId>
+  <artifactId>google-api-client-protobuf</artifactId>
+  <version>1.30.4</version>
+</dependency>	
 	</dependencies>
 
 	
 	<build>
-		<defaultGoal>generate-sources compile package install</defaultGoal>
+		<defaultGoal>generate-sources compile package install<!-- compile proto file into java files. --></defaultGoal>
 
-		<plugins>
-			<!-- compile proto file into java files. -->
+		<plugins>			
 			<plugin>
 				<groupId>com.github.os72</groupId>
 				<artifactId>protoc-jar-maven-plugin</artifactId>
@@ -63,12 +72,11 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-						   <includeMavenTypes>direct</includeMavenTypes>
-							
-							<inputDirectories>
+						   <includeMavenTypes>direct</includeMavenTypes>	
+						    <includeStdTypes>direct</includeStdTypes>						
+							<inputDirectories>								
 								<include>src/main/resources</include>
-							</inputDirectories>
-							
+							</inputDirectories>							
 							<outputTargets>
 								<outputTarget>
 									<type>java</type>
@@ -84,6 +92,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			
 
 
 			<plugin>

@@ -10,19 +10,38 @@ import com.gl.edfstubs.ResponseOuterClass.Empty;
 import com.gl.spanner.DBConnection;
 import com.google.cloud.spanner.DatabaseClient;
 
+import io.grpc.ServerServiceDefinition;
 import io.grpc.stub.StreamObserver;
 
 public class EmployeeService extends EmployeeDetailsImplBase  {
 
-	@Override
-	public void allemployees(Empty request, StreamObserver<Employees> responseObserver) {
-		// TODO Auto-generated method stub
+
+	public void allemployees(com.google.protobuf.Empty request, StreamObserver<Employees> responseObserver) {
+		System.out.println("AllEmployee");
 		DBConnection db=new DBConnection();
 		DatabaseClient dbclient=db.startConnection();
 		responseObserver.onNext(db.getAllEmploees(dbclient));
 		db.closeConnection();
 		responseObserver.onCompleted();
 	}
+	
+	
+	@Override
+	public void test(com.google.protobuf.Empty request, StreamObserver<Response> responseObserver) {
+		// TODO Auto-generated method stub
+	System.out.println("Test");
+Response r = Response.newBuilder().setResponsemessage("suceesss").build();
+responseObserver.onNext(r);
+responseObserver.onCompleted();
+	
+	}
+
+
+
+
+
+
+
 
 
 	public void addemployee(Employee request, StreamObserver<Response> responseObserver) {
@@ -37,7 +56,7 @@ public class EmployeeService extends EmployeeDetailsImplBase  {
 	@Override
 	public void editemployee(Employee request,
 			StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response> responseObserver) {
-		// TODO Auto-generated method stub
+		
 		super.editemployee(request, responseObserver);
 	}
 

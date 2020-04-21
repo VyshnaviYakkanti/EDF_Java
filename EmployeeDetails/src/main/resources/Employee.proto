@@ -1,5 +1,5 @@
 syntax = "proto3" ;
-
+package com.gl.edf;
 option java_package = "com.gl.edfstubs";
 
 message Employees

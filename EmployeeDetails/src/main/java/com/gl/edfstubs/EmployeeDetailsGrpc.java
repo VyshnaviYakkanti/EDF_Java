@@ -24,17 +24,17 @@ public class EmployeeDetailsGrpc {
 
   private EmployeeDetailsGrpc() {}
 
-  public static final String SERVICE_NAME = "EmployeeDetails";
+  public static final String SERVICE_NAME = "com.gl.edf.EmployeeDetails";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.gl.edfstubs.ResponseOuterClass.Empty,
+  public static final io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       com.gl.edfstubs.EmployeeOuterClass.Employees> METHOD_ALLEMPLOYEES =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "EmployeeDetails", "allemployees"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.ResponseOuterClass.Empty.getDefaultInstance()),
+              "com.gl.edf.EmployeeDetails", "allemployees"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.google.protobuf.Empty.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.EmployeeOuterClass.Employees.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.gl.edfstubs.EmployeeOuterClass.Employee,
@@ -42,7 +42,7 @@ public class EmployeeDetailsGrpc {
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "EmployeeDetails", "editemployee"),
+              "com.gl.edf.EmployeeDetails", "editemployee"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.ResponseOuterClass.Response.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -51,7 +51,7 @@ public class EmployeeDetailsGrpc {
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "EmployeeDetails", "addemployee"),
+              "com.gl.edf.EmployeeDetails", "addemployee"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.ResponseOuterClass.Response.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -60,8 +60,17 @@ public class EmployeeDetailsGrpc {
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "EmployeeDetails", "deleteemployee"),
+              "com.gl.edf.EmployeeDetails", "deleteemployee"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.EmployeeOuterClass.Employee.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.ResponseOuterClass.Response.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.gl.edfstubs.ResponseOuterClass.Response> METHOD_TEST =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "com.gl.edf.EmployeeDetails", "test"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.google.protobuf.Empty.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.gl.edfstubs.ResponseOuterClass.Response.getDefaultInstance()));
 
   /**
@@ -93,7 +102,7 @@ public class EmployeeDetailsGrpc {
 
     /**
      */
-    public void allemployees(com.gl.edfstubs.ResponseOuterClass.Empty request,
+    public void allemployees(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.gl.edfstubs.EmployeeOuterClass.Employees> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_ALLEMPLOYEES, responseObserver);
     }
@@ -119,13 +128,20 @@ public class EmployeeDetailsGrpc {
       asyncUnimplementedUnaryCall(METHOD_DELETEEMPLOYEE, responseObserver);
     }
 
+    /**
+     */
+    public void test(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_TEST, responseObserver);
+    }
+
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_ALLEMPLOYEES,
             asyncUnaryCall(
               new MethodHandlers<
-                com.gl.edfstubs.ResponseOuterClass.Empty,
+                com.google.protobuf.Empty,
                 com.gl.edfstubs.EmployeeOuterClass.Employees>(
                   this, METHODID_ALLEMPLOYEES)))
           .addMethod(
@@ -149,6 +165,13 @@ public class EmployeeDetailsGrpc {
                 com.gl.edfstubs.EmployeeOuterClass.Employee,
                 com.gl.edfstubs.ResponseOuterClass.Response>(
                   this, METHODID_DELETEEMPLOYEE)))
+          .addMethod(
+            METHOD_TEST,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                com.gl.edfstubs.ResponseOuterClass.Response>(
+                  this, METHODID_TEST)))
           .build();
     }
   }
@@ -173,7 +196,7 @@ public class EmployeeDetailsGrpc {
 
     /**
      */
-    public void allemployees(com.gl.edfstubs.ResponseOuterClass.Empty request,
+    public void allemployees(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.gl.edfstubs.EmployeeOuterClass.Employees> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_ALLEMPLOYEES, getCallOptions()), request, responseObserver);
@@ -202,6 +225,14 @@ public class EmployeeDetailsGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_DELETEEMPLOYEE, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void test(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_TEST, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -224,7 +255,7 @@ public class EmployeeDetailsGrpc {
 
     /**
      */
-    public com.gl.edfstubs.EmployeeOuterClass.Employees allemployees(com.gl.edfstubs.ResponseOuterClass.Empty request) {
+    public com.gl.edfstubs.EmployeeOuterClass.Employees allemployees(com.google.protobuf.Empty request) {
       return blockingUnaryCall(
           getChannel(), METHOD_ALLEMPLOYEES, getCallOptions(), request);
     }
@@ -249,6 +280,13 @@ public class EmployeeDetailsGrpc {
       return blockingUnaryCall(
           getChannel(), METHOD_DELETEEMPLOYEE, getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.gl.edfstubs.ResponseOuterClass.Response test(com.google.protobuf.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_TEST, getCallOptions(), request);
+    }
   }
 
   /**
@@ -272,7 +310,7 @@ public class EmployeeDetailsGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.gl.edfstubs.EmployeeOuterClass.Employees> allemployees(
-        com.gl.edfstubs.ResponseOuterClass.Empty request) {
+        com.google.protobuf.Empty request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_ALLEMPLOYEES, getCallOptions()), request);
     }
@@ -300,12 +338,21 @@ public class EmployeeDetailsGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_DELETEEMPLOYEE, getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.gl.edfstubs.ResponseOuterClass.Response> test(
+        com.google.protobuf.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_TEST, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ALLEMPLOYEES = 0;
   private static final int METHODID_EDITEMPLOYEE = 1;
   private static final int METHODID_ADDEMPLOYEE = 2;
   private static final int METHODID_DELETEEMPLOYEE = 3;
+  private static final int METHODID_TEST = 4;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -325,7 +372,7 @@ public class EmployeeDetailsGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ALLEMPLOYEES:
-          serviceImpl.allemployees((com.gl.edfstubs.ResponseOuterClass.Empty) request,
+          serviceImpl.allemployees((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.gl.edfstubs.EmployeeOuterClass.Employees>) responseObserver);
           break;
         case METHODID_EDITEMPLOYEE:
@@ -338,6 +385,10 @@ public class EmployeeDetailsGrpc {
           break;
         case METHODID_DELETEEMPLOYEE:
           serviceImpl.deleteemployee((com.gl.edfstubs.EmployeeOuterClass.Employee) request,
+              (io.grpc.stub.StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response>) responseObserver);
+          break;
+        case METHODID_TEST:
+          serviceImpl.test((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.gl.edfstubs.ResponseOuterClass.Response>) responseObserver);
           break;
         default:
@@ -361,7 +412,8 @@ public class EmployeeDetailsGrpc {
         METHOD_ALLEMPLOYEES,
         METHOD_EDITEMPLOYEE,
         METHOD_ADDEMPLOYEE,
-        METHOD_DELETEEMPLOYEE);
+        METHOD_DELETEEMPLOYEE,
+        METHOD_TEST);
   }
 
 }

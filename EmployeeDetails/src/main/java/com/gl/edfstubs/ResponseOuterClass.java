@@ -15,15 +15,15 @@ public final class ResponseOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface EmptyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Empty)
+      // @@protoc_insertion_point(interface_extends:com.gl.edf.Empty)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code Empty}
+   * Protobuf type {@code com.gl.edf.Empty}
    */
   public  static final class Empty extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Empty)
+      // @@protoc_insertion_point(message_implements:com.gl.edf.Empty)
       EmptyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Empty.newBuilder() to construct.
@@ -77,13 +77,13 @@ public final class ResponseOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gl.edfstubs.ResponseOuterClass.internal_static_Empty_descriptor;
+      return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Empty_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gl.edfstubs.ResponseOuterClass.internal_static_Empty_fieldAccessorTable
+      return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Empty_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gl.edfstubs.ResponseOuterClass.Empty.class, com.gl.edfstubs.ResponseOuterClass.Empty.Builder.class);
     }
@@ -234,21 +234,21 @@ public final class ResponseOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code Empty}
+     * Protobuf type {@code com.gl.edf.Empty}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Empty)
+        // @@protoc_insertion_point(builder_implements:com.gl.edf.Empty)
         com.gl.edfstubs.ResponseOuterClass.EmptyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Empty_descriptor;
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Empty_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Empty_fieldAccessorTable
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Empty_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gl.edfstubs.ResponseOuterClass.Empty.class, com.gl.edfstubs.ResponseOuterClass.Empty.Builder.class);
       }
@@ -277,7 +277,7 @@ public final class ResponseOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Empty_descriptor;
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Empty_descriptor;
       }
 
       @java.lang.Override
@@ -386,10 +386,10 @@ public final class ResponseOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Empty)
+      // @@protoc_insertion_point(builder_scope:com.gl.edf.Empty)
     }
 
-    // @@protoc_insertion_point(class_scope:Empty)
+    // @@protoc_insertion_point(class_scope:com.gl.edf.Empty)
     private static final com.gl.edfstubs.ResponseOuterClass.Empty DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gl.edfstubs.ResponseOuterClass.Empty();
@@ -427,7 +427,7 @@ public final class ResponseOuterClass {
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Response)
+      // @@protoc_insertion_point(interface_extends:com.gl.edf.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -441,11 +441,11 @@ public final class ResponseOuterClass {
         getResponsemessageBytes();
   }
   /**
-   * Protobuf type {@code Response}
+   * Protobuf type {@code com.gl.edf.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Response)
+      // @@protoc_insertion_point(message_implements:com.gl.edf.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -507,13 +507,13 @@ public final class ResponseOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gl.edfstubs.ResponseOuterClass.internal_static_Response_descriptor;
+      return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gl.edfstubs.ResponseOuterClass.internal_static_Response_fieldAccessorTable
+      return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gl.edfstubs.ResponseOuterClass.Response.class, com.gl.edfstubs.ResponseOuterClass.Response.Builder.class);
     }
@@ -708,21 +708,21 @@ public final class ResponseOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code Response}
+     * Protobuf type {@code com.gl.edf.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Response)
+        // @@protoc_insertion_point(builder_implements:com.gl.edf.Response)
         com.gl.edfstubs.ResponseOuterClass.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Response_descriptor;
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Response_fieldAccessorTable
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gl.edfstubs.ResponseOuterClass.Response.class, com.gl.edfstubs.ResponseOuterClass.Response.Builder.class);
       }
@@ -753,7 +753,7 @@ public final class ResponseOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gl.edfstubs.ResponseOuterClass.internal_static_Response_descriptor;
+        return com.gl.edfstubs.ResponseOuterClass.internal_static_com_gl_edf_Response_descriptor;
       }
 
       @java.lang.Override
@@ -936,10 +936,10 @@ public final class ResponseOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Response)
+      // @@protoc_insertion_point(builder_scope:com.gl.edf.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:Response)
+    // @@protoc_insertion_point(class_scope:com.gl.edf.Response)
     private static final com.gl.edfstubs.ResponseOuterClass.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gl.edfstubs.ResponseOuterClass.Response();
@@ -977,15 +977,15 @@ public final class ResponseOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Empty_descriptor;
+    internal_static_com_gl_edf_Empty_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Empty_fieldAccessorTable;
+      internal_static_com_gl_edf_Empty_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Response_descriptor;
+    internal_static_com_gl_edf_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Response_fieldAccessorTable;
+      internal_static_com_gl_edf_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -995,9 +995,9 @@ public final class ResponseOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016Response.proto\"\007\n\005Empty\"#\n\010Response\022\027\n" +
-      "\017responsemessage\030\001 \001(\tB\021\n\017com.gl.edfstub" +
-      "sb\006proto3"
+      "\n\016Response.proto\022\ncom.gl.edf\"\007\n\005Empty\"#\n" +
+      "\010Response\022\027\n\017responsemessage\030\001 \001(\tB\021\n\017co" +
+      "m.gl.edfstubsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1011,17 +1011,17 @@ public final class ResponseOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_Empty_descriptor =
+    internal_static_com_gl_edf_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Empty_fieldAccessorTable = new
+    internal_static_com_gl_edf_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Empty_descriptor,
+        internal_static_com_gl_edf_Empty_descriptor,
         new java.lang.String[] { });
-    internal_static_Response_descriptor =
+    internal_static_com_gl_edf_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_Response_fieldAccessorTable = new
+    internal_static_com_gl_edf_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Response_descriptor,
+        internal_static_com_gl_edf_Response_descriptor,
         new java.lang.String[] { "Responsemessage", });
   }
 
