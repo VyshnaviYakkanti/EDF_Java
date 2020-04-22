@@ -10,31 +10,16 @@ import "google/protobuf/empty.proto";
 option java_package = "com.gl.edfstubs";
 
 
-service EmployeeDetails{
+service EmployeeDetails {
 
-    rpc allemployees(google.protobuf.Empty) returns (Employees)
-    {
-    option (google.api.http) = { get: "/v1/allepmloyee" };
-    }  
+    rpc allemployees(google.protobuf.Empty) returns (Employees);
   
     rpc editemployee(Employee) returns (Response);
-    rpc addemployee(Employee) returns (Response)
-    {
-    option (google.api.http) = {
-      post: "/v1/addemployee"
-      body: "Employee"
-    };
-    }
-    rpc deleteemployee(Employee) returns (Response)    
-    {
-    option (google.api.http) = {
-      post: "/v1/deleteemployee"
-      body: "Employee"
-    };
-    }
+    rpc addemployee(Employee) returns (Response);
+     
+    rpc deleteemployee(Employee) returns (Response) ; 
+  
     
-    rpc test(google.protobuf.Empty) returns (Response)
-    {
-     option (google.api.http) = { get: "/v1/test" };
-    }
+    rpc test(google.protobuf.Empty) returns (Response);
+
 }
