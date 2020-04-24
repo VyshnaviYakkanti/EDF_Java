@@ -19,9 +19,8 @@ public class AppServer {
 		
 		Server server=
 				ServerBuilder.forPort(SpannerConstants.SERVER_PORT).							
-				//useTransportSecurity(new File("src//main//java//com//gl//server//certificate.crt"), new File("src//main//java//com//gl//server//privateKey.key")).
 				addService(new EmployeeService()).build();
-		server.start();
+				server.start();
 		System.out.println("Server Running at"+SpannerConstants.SERVER_PORT);
 		server.awaitTermination();
 	}

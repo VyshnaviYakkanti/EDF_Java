@@ -1,8 +1,24 @@
 type: google.api.Service
 config_version: 3
 
-name: bookstore.endpoints.MY_PROJECT_ID.cloud.goog
+name: employeeservice.endpoints.ageless-courier-273610.cloud.goog
 
-title: Bookstore gRPC API
+title: EmployeeService API
 apis:
-- name: endpoints.examples.bookstore.Bookstore
+- name: com.gl.edfstubs.EmployeeService
+
+http:
+  rules:
+   - selector: com.gl.edfstubs.EmployeeService.test
+     get: /test
+   - selector: com.gl.edfstubs.EmployeeService.allemployees
+     get: /allemployees
+   - selector: com.gl.edfstubs.EmployeeService.addemployee
+     post: /add
+     body: Employee
+   - selector: com.gl.edfstubs.EmployeeService.deleteemployee
+     post: /edit
+     body: Employee
+
+     
+  

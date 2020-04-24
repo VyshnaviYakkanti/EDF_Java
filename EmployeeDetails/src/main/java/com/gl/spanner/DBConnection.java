@@ -24,7 +24,7 @@ public class DBConnection {
    	 GoogleCredentials credentials;
    	 
      try {
-     	credentials	=  GoogleCredentials.fromStream(new FileInputStream("src//main//java//com//gl//spanner//config.json"));
+     	credentials	=  GoogleCredentials.fromStream(new FileInputStream(SpannerConstants.SPANNER_CONFIG_FILE));
          //getApplicationDefault(new FileInputStream(jsonPath));
      } catch (IOException e) {
          // Panic and leave ;)
@@ -41,8 +41,7 @@ public class DBConnection {
 	{
 		
 		 ResultSet resultSet = dbclient.singleUse().executeQuery(Statement.of("SELECT * From EmployeeInfo"));
-
-         System.out.println("\n\nResults:");
+         System.out.println("Results:");
          Employees.Builder allemp=Employees.newBuilder();
          // Prints the results
          int i=0;
